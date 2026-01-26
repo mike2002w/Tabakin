@@ -3703,21 +3703,24 @@
             // Get form data
             const form = event.target;
             const formData = {
-                firstName: form.querySelector('input[type="text"]').value,
-                lastName: form.querySelectorAll('input[type="text"]')[1].value,
-                phone: form.querySelector('input[type="tel"]').value,
-                email: form.querySelector('input[type="email"]').value,
-                birthday: form.querySelector('input[type="date"]').value,
-                reason: form.querySelector('textarea').value
+                firstName: form.querySelector('input[name="firstName"]').value,
+                lastName: form.querySelector('input[name="lastName"]').value,
+                phone: form.querySelector('input[name="phone"]').value,
+                email: form.querySelector('input[name="email"]').value,
+                birthday: form.querySelector('input[name="birthday"]').value,
+                reason: form.querySelector('textarea[name="reason"]').value
             };
+            
+            console.log('Form data being sent:', formData);
             
             // Disable submit button
             const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
             
             // Send to Google Apps Script
-            fetch('https://script.google.com/macros/s/AKfycbxBtLj1e5GjEPBxlB6M786DpzWBsdlcGQu6flKJPRqs2vv-N4OfAeY8XP84QZzJud_x/exec', {
+            fetch('https://script.google.com/macros/s/AKfycbxedkLZL9MXuf_sg3Wc_7w_ErW_VfR5Ba0QagNtDJyrCkodqpdmmAvZpU0GLiqIIdG-wA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
@@ -3726,16 +3729,17 @@
                 body: JSON.stringify(formData)
             })
             .then(() => {
+                console.log('Form submitted successfully');
                 alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
                 form.reset();
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit Request';
+                submitBtn.textContent = originalText;
             })
             .catch((error) => {
-                console.error('Error:', error);
+                console.error('Error submitting form:', error);
                 alert('There was an error submitting your request. Please call us at 732-235-7775 to schedule your appointment.');
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit Request';
+                submitBtn.textContent = originalText;
             });
         }
 
