@@ -1,0 +1,3609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central NJ Urogynecology - Dr. Alexandra Tabakin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Purple color palette */
+            --primary-dark: #6A1B9A;
+            --primary-medium: #8E24AA;
+            --primary-light: #E1BEE7;
+            --accent-coral: #9C27B0;
+            --accent-rose: #BA68C8;
+            --neutral-dark: #2C3E50;
+            --neutral-medium: #5A6C7D;
+            --neutral-light: #FAFAFA;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .top-bar {
+            background: var(--primary-medium);
+            color: var(--white);
+            padding: 12px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .phone-number {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .phone-number:hover {
+            color: var(--primary-light);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: 'Crimson Pro', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            cursor: pointer;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-dark);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links > li {
+            position: relative;
+        }
+
+        .nav-links a, .nav-links button {
+            color: var(--neutral-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            font-family: inherit;
+            position: relative;
+        }
+
+        .nav-links a::after, .nav-links button::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-coral);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links button:hover {
+            color: var(--primary-medium);
+        }
+
+        .nav-links a:hover::after, .nav-links button:hover::after {
+            width: 100%;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 280px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            margin-top: 5px;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        /* Add padding to dropdown parent to prevent gap */
+        .dropdown::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 10px;
+        }
+
+        .dropdown:hover .dropdown-content,
+        .dropdown-content:hover {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--neutral-dark);
+            text-decoration: none;
+            font-size: 13px;
+            text-transform: none;
+            letter-spacing: 0;
+            transition: background 0.2s ease;
+        }
+
+        .dropdown-content a:hover {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        /* Mobile Menu Styles */
+        .mobile-dropdown {
+            display: none;
+            padding-left: 20px;
+            background: var(--neutral-light);
+        }
+
+        .mobile-dropdown.active {
+            display: block;
+        }
+
+        .mobile-dropdown a {
+            display: block;
+            padding: 12px 15px;
+            color: var(--neutral-dark);
+            text-decoration: none;
+            font-size: 14px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .nav-links > li > button.mobile-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-links > li > button.mobile-toggle::after {
+            content: '▾';
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links > li > button.mobile-toggle.active::after {
+            transform: rotate(180deg);
+        }
+
+        .desktop-arrow {
+            display: inline;
+        }
+
+        /* Page Content Container */
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FFFFFF 0%, #FCE4EC 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(233, 30, 99, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(194, 24, 91, 0.06) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.02;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 35px, var(--primary-medium) 35px, var(--primary-medium) 36px),
+                repeating-linear-gradient(90deg, transparent, transparent 35px, var(--primary-medium) 35px, var(--primary-medium) 36px);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            color: var(--neutral-dark);
+        }
+
+        .hero-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 56px;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: var(--primary-dark);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            color: var(--neutral-medium);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.8s forwards;
+        }
+
+        .btn {
+            padding: 16px 35px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--accent-coral);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #C2185B;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .hero-image {
+            position: relative;
+            opacity: 0;
+            animation: fadeInRight 1s ease 0.4s forwards;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 50px rgba(156, 39, 176, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image img:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Video preview container (replaces doctor image in About section) */
+        .video-preview-container {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(156, 39, 176, 0.2);
+            width: 100%;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        /* Inner Page Hero */
+        .inner-hero {
+            background: linear-gradient(135deg, #FFFFFF 0%, #FCE4EC 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-medium);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            background: var(--white);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .back-button:hover {
+            background: var(--primary-light);
+            transform: translateX(-3px);
+        }
+
+        .back-button::before {
+            content: '←';
+            font-size: 18px;
+        }
+
+        .inner-hero h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .inner-hero p {
+            font-size: 18px;
+            color: var(--neutral-medium);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .content-section h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--neutral-medium);
+            margin-bottom: 20px;
+        }
+
+        .content-section ul {
+            margin: 20px 0 20px 30px;
+            line-height: 2;
+        }
+
+        .content-section li {
+            font-size: 16px;
+            color: var(--neutral-medium);
+            margin-bottom: 10px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 550px 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .doctor-image-container img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Credentials Box */
+        .credentials-box {
+            background: var(--primary-light);
+            border-radius: 6px;
+            border-left: 4px solid var(--accent-coral);
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .credentials-box h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .credential-item {
+            font-size: 15px;
+            color: var(--neutral-medium);
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .credential-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-coral);
+            font-weight: bold;
+        }
+
+
+        /* Conditions & Treatments Section - Side by Side Layout */
+        .conditions-treatments-section {
+            background: var(--neutral-light);
+            padding: 100px 20px;
+        }
+
+        .services-side-by-side {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .service-column {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Conditions Column - Blue Theme */
+        .conditions-column {
+            border-top: 6px solid #2196F3;
+        }
+
+        .conditions-column .column-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #E3F2FD;
+        }
+
+        .conditions-column .column-header-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: #2196F3;
+            font-size: 36px;
+            box-shadow: 0 4px 20px rgba(33, 150, 243, 0.15);
+        }
+
+        .conditions-column .column-eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2196F3;
+            margin-bottom: 12px;
+        }
+
+        .conditions-column .column-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #1976D2;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .conditions-column .column-description {
+            font-size: 15px;
+            color: var(--neutral-medium);
+            line-height: 1.6;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .conditions-column .service-link {
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            background: #F5F5F5;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--neutral-dark);
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .conditions-column .service-link:hover {
+            background: #E3F2FD;
+            border-left-color: #2196F3;
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+        }
+
+        /* Treatments Column - Pink Theme */
+        .treatments-column {
+            border-top: 6px solid var(--accent-coral);
+        }
+
+        .treatments-column .column-header {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .treatments-column .column-header-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-rose) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--white);
+            font-size: 36px;
+            box-shadow: 0 4px 20px rgba(233, 30, 99, 0.3);
+        }
+
+        .treatments-column .column-eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-coral);
+            margin-bottom: 12px;
+        }
+
+        .treatments-column .column-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .treatments-column .column-description {
+            font-size: 15px;
+            color: var(--neutral-medium);
+            line-height: 1.6;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .treatments-column .service-link {
+            display: block;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            background: var(--primary-light);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--neutral-dark);
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .treatments-column .service-link:hover {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #F8BBD0 100%);
+            border-left-color: var(--accent-coral);
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(233, 30, 99, 0.2);
+        }
+
+        .service-link-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .service-link-description {
+            font-size: 13px;
+            color: var(--neutral-medium);
+            line-height: 1.4;
+        }
+
+        /* ===== SIDE-BY-SIDE TWO COLUMN SERVICES LAYOUT ===== */
+        
+        .two-column-services {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .services-column {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .services-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .conditions-column {
+            border: 3px solid #2196F3;
+        }
+
+        .treatments-column {
+            background: linear-gradient(135deg, #FCE4EC 0%, #FFFFFF 100%);
+            border: 3px solid var(--accent-coral);
+        }
+
+        .column-header-modern {
+            text-align: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .column-icon-badge {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .conditions-badge {
+            background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+            color: #1976D2;
+        }
+
+        .treatments-badge {
+            background: linear-gradient(135deg, #FCE4EC, #F8BBD0);
+            color: var(--accent-coral);
+        }
+
+        .services-column:hover .column-icon-badge {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .column-header-modern h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .conditions-column h3 {
+            color: #1976D2;
+        }
+
+        .treatments-column h3 {
+            color: var(--primary-dark);
+        }
+
+        .column-header-modern p {
+            font-size: 15px;
+            color: var(--neutral-medium);
+        }
+
+        .column-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+
+        .conditions-card {
+            border-color: #E3F2FD;
+        }
+
+        .conditions-card:hover {
+            border-color: #2196F3;
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.15);
+        }
+
+        .conditions-card:hover::before {
+            background: #2196F3;
+        }
+
+        .treatments-card {
+            border-color: #FCE4EC;
+            background: #FAFAFA;
+        }
+
+        .treatments-card:hover {
+            border-color: var(--accent-coral);
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.15);
+            background: var(--white);
+        }
+
+        .treatments-card:hover::before {
+            background: var(--accent-coral);
+        }
+
+        .card-number-small {
+            font-family: 'Crimson Pro', serif;
+            font-size: 16px;
+            font-weight: 700;
+            min-width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .conditions-card .card-number-small {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+
+        .treatments-card .card-number-small {
+            background: #FCE4EC;
+            color: var(--accent-coral);
+        }
+
+        .service-card h4 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+
+        .conditions-card h4 {
+            color: #1976D2;
+        }
+
+        .treatments-card h4 {
+            color: var(--primary-dark);
+        }
+
+        .conditions-card:hover h4 {
+            color: #0D47A1;
+        }
+
+        .treatments-card:hover h4 {
+            color: var(--accent-coral);
+        }
+
+        .service-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--neutral-medium);
+            margin: 0;
+        }
+
+        /* Responsive for two-column services */
+        @media (max-width: 1024px) {
+            .services-side-by-side {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .service-link {
+                padding: 14px 16px;
+            }
+
+            .service-column {
+                padding: 30px 20px;
+            }
+
+            .column-title {
+                font-size: 28px !important;
+            }
+
+            .column-header-icon {
+                width: 70px !important;
+                height: 70px !important;
+            }
+
+            .column-eyebrow {
+                font-size: 11px !important;
+            }
+
+            .video-title {
+                font-size: 22px;
+            }
+
+            .btn-video {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Video Player Styling */
+        .video-section {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #FAFAFA 0%, #FFFFFF 100%);
+            border-radius: 16px;
+        }
+
+        .video-label {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-coral);
+            margin-bottom: 15px;
+        }
+
+        .video-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+        }
+
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-container iframe {
+            border: none;
+            display: block;
+        }
+
+        /* Watch Video Button on Homepage */
+        .btn-video {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--accent-coral), var(--accent-rose));
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-video:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(233, 30, 99, 0.4);
+        }
+
+        .btn-video::before {
+            content: '▶';
+            font-size: 14px;
+        }
+
+        /* Why Choose Section */
+        .why-choose-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 35px 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+            border-color: var(--accent-coral);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .feature-icon-professional {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-light) 0%, rgba(252, 228, 236, 0.3) 100%);
+            border-radius: 16px;
+            color: var(--accent-coral);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .feature-icon-professional::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--accent-coral), var(--accent-rose));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover .feature-icon-professional::before {
+            opacity: 1;
+        }
+
+        .feature-card:hover .feature-icon-professional {
+            background: linear-gradient(135deg, var(--accent-coral) 0%, var(--accent-rose) 100%);
+            color: var(--white);
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .feature-icon-professional svg {
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover .feature-icon-professional svg {
+            transform: scale(1.1);
+        }
+
+        .feature-card:nth-child(1) .feature-icon-professional,
+        .feature-card:nth-child(2) .feature-icon-professional,
+        .feature-card:nth-child(3) .feature-icon-professional,
+        .feature-card:nth-child(4) .feature-icon-professional,
+        .feature-card:nth-child(5) .feature-icon-professional,
+        .feature-card:nth-child(6) .feature-icon-professional {
+            animation: none;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* ===== OPTION B: BACKGROUND PATTERNS & DECORATIVE ELEMENTS ===== */
+        
+        /* Subtle dot pattern background */
+        .pattern-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle, rgba(233, 30, 99, 0.08) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* Geometric pattern */
+        .pattern-geometric {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(30deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03)),
+                linear-gradient(150deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03)),
+                linear-gradient(30deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03)),
+                linear-gradient(150deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03));
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+            pointer-events: none;
+        }
+
+        /* Decorative circles */
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-coral) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent-rose) 0%, transparent 70%);
+            bottom: -150px;
+            left: -100px;
+        }
+
+        .circle-3 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--primary-medium) 0%, transparent 70%);
+            top: 50%;
+            left: 10%;
+            opacity: 0.05;
+        }
+
+        /* Floating shapes */
+        .floating-shape {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.06;
+        }
+
+        .shape-square {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-coral);
+            transform: rotate(45deg);
+            top: 20%;
+            right: 15%;
+            animation: float-slow 6s ease-in-out infinite;
+        }
+
+        .shape-triangle {
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 70px solid var(--primary-medium);
+            top: 60%;
+            left: 5%;
+            animation: float-slow 8s ease-in-out infinite 1s;
+        }
+
+        @keyframes float-slow {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* Decorative lines */
+        .decorative-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-coral), transparent);
+            opacity: 0.2;
+        }
+
+        .line-top {
+            top: 100px;
+            left: 0;
+            right: 0;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        /* Add subtle texture overlay */
+        .texture-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E91E63' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* Apply patterns to sections */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .conditions-treatments-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Scroll-triggered animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scroll-animate.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .stagger-item.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Fade in from left */
+        .fade-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-left.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Fade in from right */
+        .fade-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-right.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Scale in animation */
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .scale-in.animate-in {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Button ripple effect */
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(0);
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Hover glow effect for cards */
+        .modern-card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(233, 30, 99, 0.1) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .modern-card:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .modern-card .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Feature card pulse on hover */
+        .feature-card:hover .feature-icon {
+            animation: pulse 0.6s ease;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Phone number pulse animation */
+        .phone-number {
+            position: relative;
+        }
+
+        .phone-number::before {
+            content: '📞';
+            margin-right: 8px;
+            display: inline-block;
+            animation: ring 2s ease-in-out infinite;
+        }
+
+        @keyframes ring {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            10%, 30% {
+                transform: rotate(-10deg);
+            }
+            20%, 40% {
+                transform: rotate(10deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* Smooth section transitions */
+        section {
+            transition: opacity 0.3s ease;
+        }
+
+        /* CTA section pulse */
+        .cta-section .btn-primary {
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes subtle-pulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(233, 30, 99, 0.5);
+            }
+        }
+
+        /* Logo bounce on page load */
+        .logo {
+            animation: bounce-in 0.6s ease-out;
+        }
+
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Back button slide in */
+        .back-button {
+            animation: slide-in-left 0.5s ease-out;
+        }
+
+        @keyframes slide-in-left {
+            from {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Hamburger menu animation */
+        .hamburger:hover span {
+            background: var(--accent-coral);
+        }
+
+        /* Card number animation */
+        .modern-card:hover .card-number {
+            transform: scale(1.2);
+            color: var(--primary-dark);
+        }
+
+        .card-number {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Feature card styles */
+            font-family: 'Crimson Pro', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--neutral-medium);
+            margin: 0;
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-medium) 0%, var(--primary-dark) 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 35px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 18px 45px;
+            font-size: 16px;
+        }
+
+        .cta-section .btn-secondary {
+            background: var(--white);
+            color: var(--primary-dark);
+            border: 2px solid var(--white);
+        }
+
+        .cta-section .btn-secondary:hover {
+            background: transparent;
+            color: var(--white);
+        }
+
+        /* About Page Styles */
+        .about-hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #FFFFFF 100%);
+        }
+
+        .about-subtitle {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-coral);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .about-main-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        .about-cta {
+            margin-top: 40px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Awards Section */
+        .awards-section {
+            padding: 100px 20px;
+            background: var(--neutral-light);
+        }
+
+        .awards-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .award-card {
+            background: var(--white);
+            padding: 30px 25px;
+            border-radius: 12px;
+            border: 2px solid var(--neutral-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-coral), var(--accent-rose));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .award-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .award-card:hover {
+            border-color: var(--accent-coral);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(194, 24, 91, 0.12);
+        }
+
+        .award-year {
+            font-family: 'Crimson Pro', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-coral);
+            margin-bottom: 12px;
+        }
+
+        .award-card h4 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .award-card p {
+            font-size: 14px;
+            color: var(--neutral-medium);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .timeline-header h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 42px;
+            font-weight: 600;
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        .timeline-header p {
+            font-size: 18px;
+            color: var(--neutral-medium);
+        }
+
+        /* Option B: Background Patterns & Decorative Elements */
+        
+        /* Subtle dot pattern background */
+        .pattern-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle, rgba(233, 30, 99, 0.08) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* Geometric pattern */
+        .pattern-geometric {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(30deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03)),
+                linear-gradient(150deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03)),
+                linear-gradient(30deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03)),
+                linear-gradient(150deg, rgba(233, 30, 99, 0.03) 12%, transparent 12.5%, transparent 87%, rgba(233, 30, 99, 0.03) 87.5%, rgba(233, 30, 99, 0.03));
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px;
+            pointer-events: none;
+        }
+
+        /* Decorative circles */
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-coral) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent-rose) 0%, transparent 70%);
+            bottom: -150px;
+            left: -100px;
+        }
+
+        .circle-3 {
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, var(--primary-medium) 0%, transparent 70%);
+            top: 50%;
+            left: 10%;
+            opacity: 0.05;
+        }
+
+        /* Floating shapes */
+        .floating-shape {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.06;
+        }
+
+        .shape-square {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-coral);
+            transform: rotate(45deg);
+            top: 20%;
+            right: 15%;
+            animation: float-slow 6s ease-in-out infinite;
+        }
+
+        .shape-triangle {
+            width: 0;
+            height: 0;
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 70px solid var(--primary-medium);
+            top: 60%;
+            left: 5%;
+            animation: float-slow 8s ease-in-out infinite 1s;
+        }
+
+        @keyframes float-slow {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* Decorative lines */
+        .decorative-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-coral), transparent);
+            opacity: 0.2;
+        }
+
+        .line-top {
+            top: 100px;
+            left: 0;
+            right: 0;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        /* Add subtle texture overlay */
+        .texture-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E91E63' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        /* Apply patterns to sections */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .conditions-treatments-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--primary-light);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        /* Appointment Form */
+        .appointment-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--neutral-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--neutral-dark);
+            color: var(--white);
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--accent-rose);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-coral);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                margin-top: 40px;
+            }
+
+            .hero-image img {
+                max-width: 350px;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .video-preview-container {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .modern-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .awards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                padding: 60px 0;
+            }
+
+            .hero-title {
+                font-size: 38px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .inner-hero h1 {
+                font-size: 36px;
+            }
+
+            /* Mobile Navigation */
+            .hamburger {
+                display: flex;
+            }
+
+            .desktop-arrow {
+                display: none;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links > li {
+                width: 100%;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .nav-links a, 
+            .nav-links button {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 18px 20px;
+                font-size: 15px;
+            }
+
+            .dropdown {
+                position: static;
+            }
+
+            .dropdown-content {
+                display: none !important;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .appointment-form {
+                padding: 30px 20px;
+            }
+
+            .content-section {
+                padding: 60px 20px;
+            }
+
+            .content-section h2 {
+                font-size: 32px;
+            }
+
+            .content-section h3 {
+                font-size: 22px;
+            }
+
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-header-large h2 {
+                font-size: 32px;
+            }
+
+            .column-header {
+                padding: 25px 20px;
+            }
+
+            .column-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 28px;
+            }
+
+            .column-header h3 {
+                font-size: 24px;
+            }
+
+            .service-item {
+                padding: 16px 18px;
+            }
+
+            .service-name {
+                font-size: 15px;
+            }
+
+            .modern-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .modern-card {
+                padding: 25px 20px;
+            }
+
+            .modern-card h4 {
+                font-size: 17px;
+            }
+
+            .why-choose-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .feature-card {
+                padding: 30px 25px;
+            }
+
+            .cta-section {
+                padding: 60px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+
+            .cta-section p {
+                font-size: 18px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-large {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .top-bar-content {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .inner-hero h1 {
+                font-size: 28px;
+            }
+
+            .inner-hero {
+                padding: 60px 20px 40px;
+            }
+
+            .conditions-treatments-section {
+                padding: 60px 20px;
+            }
+
+            .section-header-large {
+                margin-bottom: 40px;
+            }
+
+            .service-name {
+                font-size: 14px;
+            }
+
+            .service-arrow {
+                font-size: 18px;
+            }
+
+            .modern-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .subsection-wrapper {
+                margin-top: 60px !important;
+            }
+
+            .badge-text {
+                font-size: 18px;
+            }
+
+            .about-main-title {
+                font-size: 32px;
+            }
+
+            .about-cta {
+                flex-direction: column;
+            }
+
+            .about-cta .btn {
+                width: 100%;
+            }
+
+            .awards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .timeline-header h2 {
+                font-size: 32px;
+            }
+
+            .awards-section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div>APPOINTMENTS</div>
+            <a href="tel:732-235-7775" class="phone-number">732-235-7775</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo" onclick="showPage('home')">Central NJ Urogynecology</div>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showPage('home'); closeMobileMenu(); return false;">Home</a></li>
+                <li><a href="#" onclick="showPage('about'); closeMobileMenu(); return false;">About</a></li>
+                <li class="dropdown">
+                    <button onclick="toggleMobileDropdown('conditionsDropdown', event)" class="mobile-toggle">Conditions</button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('pelvic-organ-prolapse'); return false;">Pelvic Organ Prolapse</a>
+                        <a href="#" onclick="showPage('urinary-leakage'); return false;">Urinary Leakage</a>
+                        <a href="#" onclick="showPage('stress-urinary-incontinence'); return false;">Stress Urinary Incontinence</a>
+                        <a href="#" onclick="showPage('overactive-bladder'); return false;">Overactive Bladder</a>
+                        <a href="#" onclick="showPage('vaginal-fistula'); return false;">Vaginal Fistula</a>
+                        <a href="#" onclick="showPage('urethral-diverticulum'); return false;">Urethral Diverticulum</a>
+                        <a href="#" onclick="showPage('maternal-pelvic-floor-trauma'); return false;">Maternal Pelvic Floor Trauma</a>
+                        <a href="#" onclick="showPage('genitourinary-syndrome'); return false;">Genitourinary Syndrome of Menopause</a>
+                    </div>
+                    <div class="mobile-dropdown" id="conditionsDropdown">
+                        <a href="#" onclick="showPage('pelvic-organ-prolapse'); closeMobileMenu(); return false;">Pelvic Organ Prolapse</a>
+                        <a href="#" onclick="showPage('urinary-leakage'); closeMobileMenu(); return false;">Urinary Leakage</a>
+                        <a href="#" onclick="showPage('stress-urinary-incontinence'); closeMobileMenu(); return false;">Stress Urinary Incontinence</a>
+                        <a href="#" onclick="showPage('overactive-bladder'); closeMobileMenu(); return false;">Overactive Bladder</a>
+                        <a href="#" onclick="showPage('vaginal-fistula'); closeMobileMenu(); return false;">Vaginal Fistula</a>
+                        <a href="#" onclick="showPage('urethral-diverticulum'); closeMobileMenu(); return false;">Urethral Diverticulum</a>
+                        <a href="#" onclick="showPage('maternal-pelvic-floor-trauma'); closeMobileMenu(); return false;">Maternal Pelvic Floor Trauma</a>
+                        <a href="#" onclick="showPage('genitourinary-syndrome'); closeMobileMenu(); return false;">Genitourinary Syndrome of Menopause</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <button onclick="toggleMobileDropdown('treatmentsDropdown', event)" class="mobile-toggle">Treatments</button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="showPage('robotic-surgery'); return false;">Robotic Surgery</a>
+                        <a href="#" onclick="showPage('vaginal-surgery'); return false;">Vaginal Surgery</a>
+                        <a href="#" onclick="showPage('prolapse-surgery'); return false;">Prolapse Surgery</a>
+                        <a href="#" onclick="showPage('midurethral-sling'); return false;">Midurethral Sling</a>
+                        <a href="#" onclick="showPage('urethral-bulking'); return false;">Urethral Bulking</a>
+                        <a href="#" onclick="showPage('sacral-neuromodulation'); return false;">Sacral Neuromodulation</a>
+                        <a href="#" onclick="showPage('bladder-botox'); return false;">Bladder Botox</a>
+                        <a href="#" onclick="showPage('tibial-nerve-stimulation'); return false;">Posterior Tibial Nerve Stimulation</a>
+                    </div>
+                    <div class="mobile-dropdown" id="treatmentsDropdown">
+                        <a href="#" onclick="showPage('robotic-surgery'); closeMobileMenu(); return false;">Robotic Surgery</a>
+                        <a href="#" onclick="showPage('vaginal-surgery'); closeMobileMenu(); return false;">Vaginal Surgery</a>
+                        <a href="#" onclick="showPage('prolapse-surgery'); closeMobileMenu(); return false;">Prolapse Surgery</a>
+                        <a href="#" onclick="showPage('midurethral-sling'); closeMobileMenu(); return false;">Midurethral Sling</a>
+                        <a href="#" onclick="showPage('urethral-bulking'); closeMobileMenu(); return false;">Urethral Bulking</a>
+                        <a href="#" onclick="showPage('sacral-neuromodulation'); closeMobileMenu(); return false;">Sacral Neuromodulation</a>
+                        <a href="#" onclick="showPage('bladder-botox'); closeMobileMenu(); return false;">Bladder Botox</a>
+                        <a href="#" onclick="showPage('tibial-nerve-stimulation'); closeMobileMenu(); return false;">Posterior Tibial Nerve Stimulation</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick="showPage('appointments'); closeMobileMenu(); return false;">Appointments</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="pattern-dots"></div>
+            <div class="decorative-circle circle-1"></div>
+            <div class="floating-shape shape-square"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Central NJ Urogynecology</h1>
+                    <p class="hero-description">
+                        Are you looking for world class urogynecology care at an academic center? Dr. Alexandra Tabakin has 
+                        helped hundreds of women regain their confidence and quality of life back. She offers comprehensive 
+                        care for pelvic floor disorders including bladder and uterine prolapse, incontinence, urethral diverticula, 
+                        bladder and fistulas, mesh complications, and many more.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showPage('appointments')">Schedule Appointment</button>
+                        <button class="btn btn-secondary" onclick="showPage('about')">Meet Dr. Tabakin</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg" 
+                         alt="Dr. Alexandra Tabakin">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section class="content-section">
+            <div class="texture-overlay"></div>
+            <div class="decorative-circle circle-2"></div>
+            <div class="two-column">
+                <div class="video-preview-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158218957?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;" title="Dr. Alexandra Tabakin - About Me"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <h2>Meet Dr. Tabakin</h2>
+                    <p>
+                        Dr. Alexandra Tabakin combines advanced fellowship training and experience with a compassionate, 
+                        evidence-based approach to help women improve their pelvic health and quality of life with a focus 
+                        on real, professional care tailored to your unique needs.
+                    </p>
+                    <p>
+                        By providing cutting-edge and research-driven treatments, Dr. Tabakin offers comprehensive care for 
+                        pelvic floor disorders including pelvic organ prolapse, urinary incontinence, genitourinary fistulae, 
+                        mesh complications, urethral diverticulum, and many others. From diagnosis to treatment and aftercare, 
+                        her experience and expertise provide the world-class care you deserve.
+                    </p>
+                    <button class="btn btn-primary" onclick="showPage('about')">Learn More About Dr. Tabakin</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conditions & Treatments Section -->
+        <section class="conditions-treatments-section">
+            <div class="pattern-geometric"></div>
+            <div class="decorative-circle circle-3"></div>
+            <div class="floating-shape shape-triangle"></div>
+            <div class="section-header-large">
+                <h2>Conditions We Treat & Treatments We Offer</h2>
+                <p>Comprehensive care for a wide range of pelvic floor disorders</p>
+            </div>
+
+            <!-- Side-by-Side Two Column Layout -->
+            <div class="services-side-by-side">
+                <!-- Conditions Column (LEFT - Blue Theme) -->
+                <div class="service-column conditions-column">
+                    <div class="column-header">
+                        <div class="column-header-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4.5 3h15M6 3v18M18 3v18"/>
+                                <circle cx="18" cy="15" r="2"/>
+                                <circle cx="12" cy="15" r="1"/>
+                                <path d="M18 15c0-3-2-5-6-5s-6 2-6 5"/>
+                            </svg>
+                        </div>
+                        <div class="column-eyebrow">What We Treat</div>
+                        <h3 class="column-title">Conditions</h3>
+                        <p class="column-description">Expert diagnosis and comprehensive care for pelvic floor disorders</p>
+                    </div>
+
+                    <a href="#" onclick="showPage('pelvic-organ-prolapse'); return false;" class="service-link">
+                        <span class="service-link-title">Pelvic Organ Prolapse</span>
+                        <span class="service-link-description">Comprehensive surgical and non-surgical treatments</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('stress-urinary-incontinence'); return false;" class="service-link">
+                        <span class="service-link-title">Stress Urinary Incontinence</span>
+                        <span class="service-link-description">Advanced solutions for bladder leakage during physical activity</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('overactive-bladder'); return false;" class="service-link">
+                        <span class="service-link-title">Overactive Bladder</span>
+                        <span class="service-link-description">Modern therapies for urgency and frequency symptoms</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('urinary-leakage'); return false;" class="service-link">
+                        <span class="service-link-title">Urinary Leakage</span>
+                        <span class="service-link-description">Personalized treatment for involuntary urine loss</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('vaginal-fistula'); return false;" class="service-link">
+                        <span class="service-link-title">Vaginal Fistula</span>
+                        <span class="service-link-description">Expert repair of complex fistulas</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('urethral-diverticulum'); return false;" class="service-link">
+                        <span class="service-link-title">Urethral Diverticulum</span>
+                        <span class="service-link-description">Specialized surgical treatment</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('maternal-pelvic-floor-trauma'); return false;" class="service-link">
+                        <span class="service-link-title">Maternal Pelvic Floor Trauma</span>
+                        <span class="service-link-description">Comprehensive postpartum care</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('genitourinary-syndrome'); return false;" class="service-link">
+                        <span class="service-link-title">Genitourinary Syndrome</span>
+                        <span class="service-link-description">Treatment for menopause-related symptoms</span>
+                    </a>
+                </div>
+
+                <!-- Treatments Column (RIGHT - Pink Theme) -->
+                <div class="service-column treatments-column">
+                    <div class="column-header">
+                        <div class="column-header-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <div class="column-eyebrow">How We Help</div>
+                        <h3 class="column-title">Treatments</h3>
+                        <p class="column-description">Advanced surgical and non-surgical solutions tailored to you</p>
+                    </div>
+
+                    <a href="#" onclick="showPage('robotic-surgery'); return false;" class="service-link">
+                        <span class="service-link-title">Robotic Surgery</span>
+                        <span class="service-link-description">Minimally invasive precision procedures</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('vaginal-surgery'); return false;" class="service-link">
+                        <span class="service-link-title">Vaginal Surgery</span>
+                        <span class="service-link-description">No external incisions, faster recovery</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('prolapse-surgery'); return false;" class="service-link">
+                        <span class="service-link-title">Prolapse Surgery</span>
+                        <span class="service-link-description">Restoring normal organ position</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('midurethral-sling'); return false;" class="service-link">
+                        <span class="service-link-title">Midurethral Sling</span>
+                        <span class="service-link-description">Effective treatment for stress incontinence</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('urethral-bulking'); return false;" class="service-link">
+                        <span class="service-link-title">Urethral Bulking</span>
+                        <span class="service-link-description">Minimally invasive injection therapy</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('sacral-neuromodulation'); return false;" class="service-link">
+                        <span class="service-link-title">Sacral Neuromodulation</span>
+                        <span class="service-link-description">Advanced nerve stimulation therapy</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('bladder-botox'); return false;" class="service-link">
+                        <span class="service-link-title">Bladder Botox</span>
+                        <span class="service-link-description">Relaxing overactive bladder muscles</span>
+                    </a>
+
+                    <a href="#" onclick="showPage('tibial-nerve-stimulation'); return false;" class="service-link">
+                        <span class="service-link-title">Tibial Nerve Stimulation</span>
+                        <span class="service-link-description">Non-surgical bladder control therapy</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Dr. Tabakin Section -->
+        <section class="content-section" style="background: white;">
+            <div class="section-header-large">
+                <h2>Why Choose Dr. Tabakin</h2>
+                <p>Exceptional care backed by expertise and compassion</p>
+            </div>
+
+            <div class="why-choose-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-professional">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <h3>Expert Training</h3>
+                    <p>Fellowship-trained in urogynecology and reconstructive pelvic surgery at prestigious institutions including Northwell Health</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-professional">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Research Leader</h3>
+                    <p>Over 80 peer-reviewed publications and regular presentations at national conferences, staying at the forefront of medical advances</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-professional">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3>Academic Excellence</h3>
+                    <p>Assistant Professor of Surgery at Rutgers Robert Wood Johnson Medical School, combining clinical practice with teaching</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-professional">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Compassionate Care</h3>
+                    <p>Patient-centered approach focused on your unique needs, comfort, and quality of life improvements</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-professional">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3>Comprehensive Solutions</h3>
+                    <p>Full range of non-surgical and surgical treatment options, from conservative management to advanced procedures</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-professional">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Local Expertise</h3>
+                    <p>A proud New Jersey native providing world-class care right here in your community</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Improve Your Quality of Life?</h2>
+                <p>Schedule a consultation with Dr. Tabakin to discuss your treatment options</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large" onclick="showPage('appointments')">Schedule an Appointment</button>
+                    <a href="tel:732-235-7775" class="btn btn-secondary btn-large">Call 732-235-7775</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page-content">
+        <div class="inner-hero about-hero">
+            <a href="#" onclick="showPage('home'); return false;" class="back-button">Back to Home</a>
+            <h1>Meet Dr. Alexandra Tabakin</h1>
+            <p>Fellowship-trained urologist and urogynecologist serving Central New Jersey</p>
+        </div>
+        
+        <!-- Video Section -->
+        <section class="content-section" style="padding-top: 60px;">
+            <div class="video-section">
+                <div class="video-label">Get to Know Dr. Tabakin</div>
+                <h3 class="video-title">A Personal Introduction</h3>
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158218957?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Dr. Alexandra Tabakin - About Me"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <div class="two-column">
+                <div class="doctor-image-container">
+                    <img src="https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg" 
+                         alt="Dr. Alexandra Tabakin">
+                </div>
+                <div>
+                    <div class="about-subtitle">About Dr. Tabakin</div>
+                    <h2 class="about-main-title">Combining Expertise with Compassionate Care</h2>
+                    
+                    <p>
+                        Dr. Alexandra Tabakin is a fellowship-trained urologist and urogynecologist dedicated to caring for patients throughout central New Jersey. She practices at Rutgers Robert Wood Johnson Medical School, where she serves as an Assistant Professor of Surgery in the Division of Urology. A proud New Jersey native, Dr. Tabakin is honored to provide compassionate, expert care to patients in her own community.
+                    </p>
+                    <p>
+                        Dr. Tabakin completed three years of advanced fellowship training in urogynecology and reconstructive pelvic surgery. She offers both non-surgical and surgical treatments for a wide range of pelvic floor disorders, including pelvic organ prolapse, stress urinary incontinence, overactive bladder, urethral diverticulum, genitourinary fistula, and mesh complications. In addition, she treats men with benign prostatic hyperplasia (BPH) and voiding dysfunction.
+                    </p>
+                    <p>
+                        As an experienced surgeon, Dr. Tabakin performs a variety of procedures, including robotic and vaginal prolapse surgery, sacral neuromodulation, slings and periurethral bulking injections for stress urinary incontinence, and implantable tibial nerve stimulation, among others.
+                    </p>
+                    <p>
+                        Dr. Tabakin is a prolific researcher with over 80 peer reviewed publications and abstracts. She regularly presents at national urology and urogynecology conferences.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="about-cta">
+                        <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+                        <a href="tel:732-235-7775" class="btn btn-secondary">Call 732-235-7775</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="credentials-box" style="margin-top: 60px;">
+                <h3>Education and Training</h3>
+                <div class="credential-item">Medical School: Rutgers Robert Wood Johnson Medical School, New Brunswick, NJ - Doctor of Medicine</div>
+                <div class="credential-item">Residency in Urology: Rutgers Robert Wood Johnson Medical School, New Brunswick, NJ</div>
+                <div class="credential-item">Fellowship in Urogynecology and Reconstructive Pelvic Surgery: Northwell Health - North Shore University Hospital and Long Island Jewish Medical Center, New Hyde Park, NY</div>
+            </div>
+        </section>
+
+        <!-- Awards Grid -->
+        <section class="awards-section">
+            <div class="awards-container">
+                <div class="timeline-header">
+                    <h2>Honors & Awards</h2>
+                    <p>Recognized for excellence in clinical care, research, and teaching</p>
+                </div>
+
+                <div class="awards-grid">
+                    <div class="award-card">
+                        <div class="award-year">2025</div>
+                        <h4>Best Overall Conference Video</h4>
+                        <p>Society of Urodynamics Female Pelvic Medicine & Urogenital Reconstruction</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2022</div>
+                        <h4>Urology Leadership and Service Award</h4>
+                        <p>Rutgers Robert Wood Johnson Medical School</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2022</div>
+                        <h4>Overall Champion, Chief Debate</h4>
+                        <p>American Urological Association New York Section</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2018</div>
+                        <h4>Humanism and Excellence in Teaching Award</h4>
+                        <p>Rutgers Robert Wood Johnson Medical School</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2017</div>
+                        <h4>Glasgow-Rubin Citation for Academic Achievement</h4>
+                        <p>Rutgers University</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2016</div>
+                        <h4>Alpha Omega Alpha Honor Medical Society</h4>
+                        <p>National Medical Honor Society</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2016</div>
+                        <h4>Gold Humanism Honor Society</h4>
+                        <p>Recognizing compassionate patient care</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2013</div>
+                        <h4>Henry Rutgers Scholar Award</h4>
+                        <p>Rutgers University highest academic honor</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2013</div>
+                        <h4>MacMillan Award for Research Excellence</h4>
+                        <p>The Duncan and Nancy MacMillan Award</p>
+                    </div>
+
+                    <div class="award-card">
+                        <div class="award-year">2012</div>
+                        <h4>Phi Beta Kappa</h4>
+                        <p>National Honor Society</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- PELVIC ORGAN PROLAPSE PAGE -->
+    <div id="pelvic-organ-prolapse" class="page-content">
+        <div class="inner-hero">
+            <a href="#" onclick="showPage('home'); return false;" class="back-button">Back to Home</a>
+            <h1>Pelvic Organ Prolapse</h1>
+            <p>Comprehensive treatment for pelvic organ prolapse</p>
+        </div>
+        
+        <section class="content-section">
+            <!-- Video Section -->
+            <div class="video-section" style="margin-bottom: 40px;">
+                <div class="video-container">
+                    <div style="padding:75% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158242883?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;" title="Dr. Tabakin Pelvic Organ Prolapse Introduction"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>What is pelvic organ prolapse?</h2>
+            <p>Pelvic organ prolapse refers to any of the pelvic organs— bladder, uterus, vagina or rectum—dropping from their normal position and causing pressure or creating a vaginal bulge.</p>
+
+            <h3>What are symptoms of pelvic organ prolapse?</h3>
+            <p>Many women experience no symptoms, while others may experience some of the following, which tend to progress very gradually:</p>
+            <ul>
+                <li>A bulge near the opening of the vagina</li>
+                <li>Pressure or heavy sensation in the vagina</li>
+                <li>A feeling of fullness in your lower belly or of "sitting on a ball"</li>
+                <li>Difficult or strained bowel movements</li>
+                <li>Vaginal dryness or irritation and pain with intercourse</li>
+                <li>Difficulty starting to urinate, frequent urination or leaking of urine</li>
+                <li>Irregular spotting or bleeding from the vagina</li>
+                <li>Lower back discomfort</li>
+            </ul>
+
+            <h3>What causes pelvic organ prolapse?</h3>
+            <p>While women of all ages may be affected by pelvic organ prolapse, it is more common in older women. Certain factors may increase your risk, including:</p>
+            <ul>
+                <li>Pregnancy and childbirth (especially delivery of large babies)</li>
+                <li>Chronic cough</li>
+                <li>Chronic constipation or straining during bowel movements</li>
+                <li>Frequent heavy lifting</li>
+                <li>Menopause</li>
+                <li>Obesity</li>
+                <li>Connective tissue disorders</li>
+                <li>Prior pelvic surgery/hysterectomy</li>
+            </ul>
+
+            <h3>How is pelvic organ prolapse diagnosed?</h3>
+            <p>Diagnosis begins with your medical history and a physical exam of your pelvic organs. Some additional tests may be necessary (including bladder function tests, pelvic floor strength tests, MRI or ultrasound) to help determine the exact type of prolapse.</p>
+
+            <h3>How is pelvic organ prolapse treated?</h3>
+            <p>The treatment for pelvic organ prolapse depends on your type of prolapse, severity of symptoms, lifestyle, and treatment goals. There are non-surgical and surgical options.</p>
+
+            <div class="info-box">
+                <h3>Non-surgical options include:</h3>
+                <ul>
+                    <li>Observation</li>
+                    <li>Lifestyle modifications (weight loss, anti-cough medications, etc.)</li>
+                    <li>Pelvic floor physical therapy</li>
+                    <li>Pessary</li>
+                    <li>Intra-vaginal inserts</li>
+                </ul>
+
+                <h3>Surgical options include:</h3>
+                <ul>
+                    <li>Vaginal Surgery</li>
+                    <li>Robotic/Laparoscopic Abdominal Surgery</li>
+                </ul>
+            </div>
+
+            <!-- Second Video - Treatment Options -->
+            <div class="video-section" style="margin: 40px 0;">
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158223779?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;" title="POP Treatment Options"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <!-- APPOINTMENTS PAGE -->
+    <div id="appointments" class="page-content">
+        <div class="inner-hero">
+            <h1>Schedule Your Appointment</h1>
+            <p>Call to schedule your consultation today</p>
+        </div>
+        
+        <section class="content-section">
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+                Pelvic floor issues are not always easy to talk about. Dr. Tabakin will provide a safe, comfortable space for your urogynecology needs to be addressed.
+            </p>
+
+            <div class="info-box" style="max-width: 600px; margin: 40px auto; text-align: center;">
+                <h2 style="margin-bottom: 20px;">Contact Us</h2>
+                <p style="font-size: 20px; margin-bottom: 10px;"><strong>For appointments, call:</strong></p>
+                <p style="font-size: 32px; color: var(--accent-coral); font-weight: 600; margin-bottom: 30px;">
+                    <a href="tel:732-235-7775" style="color: var(--accent-coral); text-decoration: none;">732-235-7775</a>
+                </p>
+                
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">Practice Location</h3>
+                <p>Clinical Academic Building at<br>Rutgers Robert Wood Johnson Medical School</p>
+                <p>125 Paterson Street, Suite 4100<br>New Brunswick, NJ 08901</p>
+            </div>
+
+            <div class="appointment-form">
+                <h2 style="text-align: center; margin-bottom: 30px;">Request an Appointment</h2>
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone *</label>
+                        <input type="tel" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Birthday *</label>
+                        <input type="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Appointment Reason *</label>
+                        <textarea required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Additional Condition Pages (simplified templates) -->
+    <div id="urinary-leakage" class="page-content">
+        <div class="inner-hero">
+            <h1>Urinary Leakage</h1>
+        </div>
+        <section class="content-section">
+            <!-- Video Section -->
+            <div class="video-section" style="margin-bottom: 40px;">
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158238522?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;" title="Urinary incontinence"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>What is urinary incontinence?</h2>
+            <p>Urinary incontinence (UI) is the uncontrollable leakage of urine. This can be caused by nerve or muscle dysfunction of the bladder, loss of support of the urethra and/or bladder, or weakened urinary sphincter.</p>
+            
+            <h2>What causes urinary incontinence, and how common is it?</h2>
+            <p>Approximately 30 percent of women in the U.S. suffer from urinary incontinence, which can affect women of all ages. Some women may be at increased risk for urinary incontinence due to:</p>
+            <ul>
+                <li>Pregnancy and childbirth (your risk increases with the number of children you have)</li>
+                <li>Menopause or aging</li>
+                <li>Being overweight or obese</li>
+                <li>Diabetes</li>
+                <li>Stroke</li>
+                <li>Prior hysterectomy (removal of uterus)</li>
+                <li>Smoking</li>
+            </ul>
+            
+            <h2>What are the types of urinary incontinence?</h2>
+            <ul>
+                <li><strong>Stress urinary incontinence:</strong> occurs most commonly when there is a weakness in urethral support or in the urinary sphincter. As a result, certain activities—such as sneezing, coughing, laughing, bending or exercising—places pressure on the bladder and causes urine to leak involuntarily.</li>
+                <li><strong>Urge urinary incontinence (also known as overactive bladder):</strong> the sudden urge to urinate, often with little or no warning. Your bladder muscles may be too active and squeeze to pass urine before you can get to the bathroom.</li>
+                <li><strong>Mixed incontinence:</strong> a combination of having stress urinary incontinence and urge urinary incontinence.</li>
+                <li><strong>Overflow incontinence:</strong> when you are unable to empty your bladder and the urine overflows or leaks out. Symptoms include frequent urination of small amounts or a constant drip.</li>
+            </ul>
+            
+            <h2>How is urinary incontinence diagnosed?</h2>
+            <p>In order to determine the type of urinary incontinence that you have, your doctor will first ask for your medical history. You should be prepared to share details of any pregnancies and deliveries you've had, as well as if you're experiencing menopause, since these can all be major causes of urinary incontinence. Your doctor will also perform a physical examination. They may also request a urinalysis to test for signs of infection or blood in your urine, or ask you to urinate in a container to measure the amount of urine you produce.</p>
+            
+            <h2>How is urinary incontinence treated?</h2>
+            <p>Treatment for urinary incontinence depends on what type of urinary incontinence you have. Generally, patients may be offered non-surgical options (such as lifestyle modifications or physical therapy) or surgical options. Based on your history, examination, lifestyle, and goals, you and your doctor will come up with a personalized plan.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="stress-urinary-incontinence" class="page-content">
+        <div class="inner-hero">
+            <h1>Stress Urinary Incontinence</h1>
+        </div>
+        <section class="content-section">
+            <!-- Video Section -->
+            <div class="video-section" style="margin-bottom: 40px;">
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158237530?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;" title="SUI Treatment Options"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>What is stress urinary incontinence?</h2>
+            <p>Stress urinary incontinence means leakage of urine with activities like coughing, laughing, or sneezing. This type of urinary leakage occurs because of general wear and tear over time to the pelvic muscles. The urethra (the tube through which you urinate) looses its support from the pelvic floor muscles, causing urine to leak with activities.</p>
+            
+            <h2>How is stress urinary incontinence treated?</h2>
+            <p>The treatment for stress urinary incontinence depends on your type of prolapse, severity of symptoms, lifestyle, and treatment goals. There are non-surgical and surgical options. Your doctor will help you select the best option for you.</p>
+            
+            <p><strong>Non-surgical options include:</strong></p>
+            <ul>
+                <li>Observation</li>
+                <li>Lifestyle modifications (weight loss, anti-cough medications, etc.)</li>
+                <li>Pelvic floor physical therapy</li>
+                <li>Pessary</li>
+                <li>Intra-vaginal inserts</li>
+            </ul>
+            
+            <p><strong>Surgical options include:</strong></p>
+            <ul>
+                <li>Urethral Bulking Agent</li>
+                <li>Mid-urethral Sling</li>
+            </ul>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="overactive-bladder" class="page-content">
+        <div class="inner-hero">
+            <h1>Overactive Bladder</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is overactive bladder?</h2>
+            <p>Overactive bladder is a group of symptoms including bothersome urinary urgency, frequency, and waking up to urinate in the middle of the night. Some patients may also have leakage of urine or loss of urine control associated with the urge to urinate.</p>
+            
+            <h2>What causes OAB and how common is it?</h2>
+            <p>Approximately 20-40 percent of women in the U.S. suffer from overactive bladder, which can affect women of all ages. Some women may be at increased risk for urinary incontinence due to:</p>
+            <ul>
+                <li>Pregnancy and childbirth</li>
+                <li>Menopause or aging</li>
+                <li>Being overweight or obese</li>
+                <li>Diabetes</li>
+                <li>Stroke or other neurologic diseases</li>
+                <li>Prior hysterectomy (removal of uterus)</li>
+                <li>Smoking</li>
+            </ul>
+            
+            <h2>How is overactive bladder diagnosed?</h2>
+            <p>First, your doctor will perform a history and physical examination. While a patient history often is sufficient for a diagnosis, your doctor may request other tests including a urine test, urodynamics, or cystoscopy.</p>
+            
+            <h2>How is overactive bladder treated?</h2>
+            <p>Treating overactive bladder requires a personalized approach. Your doctor will work with you to create a treatment plan tailored to your needs.</p>
+            
+            <p>Conservative treatment for overactive bladder include behavioral modifications, such as dietary and fluid changes, and pelvic floor physical therapy.</p>
+            
+            <p>Pharmacologic treatment includes the addition of medications such as beta-3 agonists or anti-cholinergic drugs.</p>
+            
+            <p>Minimally-invasive treatment involves ambulatory procedures including <a href="#" onclick="showPage('bladder-botox'); return false;">bladder botox</a>, <a href="#" onclick="showPage('sacral-neuromodulation'); return false;">sacral neuromodulation</a>, <a href="#" onclick="showPage('tibial-nerve-stimulation'); return false;">implantable tibial nerve stimulation</a> and posterior tibial nerve stimulation.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="vaginal-fistula" class="page-content">
+        <div class="inner-hero">
+            <h1>Vaginal Fistula</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is a vaginal fistula?</h2>
+            <p>A vaginal fistula is an abnormal opening between the vagina and another organ. A vesicovaginal fistula is an abnormal connection between the bladder and the vagina; a rectovaginal fistula is an abnormal opening between the rectum and the vagina; an enterovaginal fistula is an abnormal opening between the small bowels and the vagina. These openings may result in incontinence.</p>
+            
+            <h2>What are the symptoms of a vaginal fistula?</h2>
+            <p>The symptoms of a vaginal fistula are urine or feces being released through the vagina. Women who have a vaginal fistula may feel embarrassed by the condition, as it can cause vaginal leakage and unpleasant smells.</p>
+            
+            <h2>What are the causes of a vaginal fistula?</h2>
+            <p>The most common cause of vaginal fistulas is prolonged labor. Fistulas can also be caused by urologic or pelvic surgery, an infection or cancer. Sometimes, conditions like Crohn's disease or diverticulitis can lead to a vaginal fistula. Accidents and traumatic injuries can also lead to a vaginal fistula.</p>
+            
+            <h2>How is a vaginal fistula treated?</h2>
+            <p>Nonsurgical treatment may be an option for some patients with this condition. For vaginal fistulas that are detected early and are less than half a centimeter in size, a catheter can often be inserted to see if the fistula will repair itself. Small, uncomplicated rectovaginal fistulas can sometimes be treated with a plug that is placed in the rectum. This is often used to treat patients who are not good surgical candidates.</p>
+            
+            <p>Vaginal fistulas are typically repaired surgically through the vagina. This procedure has the lowest risk of complication. However, depending on the location and complexity of the fistula, it may be necessary to perform the surgery through the abdomen. Repairing fistula through the abdomen can be done via robotic surgery, which typically minimizes the size of the incision and the amount of pain for the patient.</p>
+            
+            <p>If a patient presents with a clean fistula and is in good health, the success rate of fistula surgery is high. The procedure, like any surgery, does carry the risk of bleeding, infection and damage to surrounding organs.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="urethral-diverticulum" class="page-content">
+        <div class="inner-hero">
+            <h1>Urethral Diverticulum</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is a urethral diverticulum?</h2>
+            <p>A urethral diverticulum (UD) is a condition that causes a "pocket," or an outpouching, along the urethra (the tube that connects the bladder to the outside of the body and allows for urination). Urethral diverticulum is rare, but is more common in women between the ages of 40 and 70.</p>
+            
+            <h2>What are the symptoms of a urethral diverticulum?</h2>
+            <p>Not everyone who has a urethral diverticulum will experience symptoms. However, some symptoms of a urethral diverticulum may include:</p>
+            <ul>
+                <li>Urinary urgency or frequency</li>
+                <li>Recurring urinary tract infections</li>
+                <li>Pain with urination (dysuria)</li>
+                <li>Pain with sexual intercourse (dyspareunia)</li>
+                <li>Blood in the urine</li>
+                <li>Leaking urine</li>
+                <li>Non-urine discharge</li>
+                <li>Feeling or incomplete bladder emptying after urination</li>
+                <li>Bladder pain</li>
+            </ul>
+            
+            <h2>What causes a urethral diverticulum?</h2>
+            <p>While urethral diverticulum isn't common, various factors increase the chances of having this condition. This includes frequent urinary tract infections and trauma to the area, such as obstetric trauma during delivery, including vaginal tears caused by the use of forceps or a vacuum.</p>
+            
+            <p>A urethral diverticulum can be caused by an infection of the glands that are connected to the urethra. The glands can fill with fluid or materials, which will cause the outpouching. Over time, urine may collect in that area, causing the pouch to increase in size.</p>
+            
+            <h2>How is a urethral diverticulum diagnosed?</h2>
+            <p>In women, a urethral diverticulum looks like a fist-like protrusion on the top of the vaginal wall and can be detected by your doctor during a physical exam.</p>
+            
+            <p>Because not all UDs have symptoms, a urethral diverticulum may be found during a routine exam or test for another condition. It may take some time before a urethral diverticulum is properly diagnosed.</p>
+            
+            <p>Other tools used to diagnose a UD include:</p>
+            <ul>
+                <li>MRI (magnetic resonance imaging)</li>
+                <li>Ultrasound</li>
+                <li>Tests that measure urinary tract function</li>
+            </ul>
+            
+            <h2>How is a urethral diverticulum treated?</h2>
+            <p>Urethral diverticulum is treated by a urethral diverticulectomy, in which the protrusion on the urethra is surgically removed. In some instances, the surgeon may be able to drain the contents of the sac rather than removing the UD completely. After your surgery, you will most likely need a course of antibiotics and to use a catheter for several weeks while you heal from the procedure.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="maternal-pelvic-floor-trauma" class="page-content">
+        <div class="inner-hero">
+            <h1>Maternal Pelvic Floor Trauma</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is maternal pelvic floor trauma?</h2>
+            <p>The pelvic floor muscles support the pelvic organs, which include the bladder, bowel and uterus in women. Maternal pelvic floor trauma—sometimes referred to as childbirth injury—can occur during pregnancy or delivery and encompasses a variety of complications. Stress from pregnancy and vaginal delivery puts pressure on the pelvic floor muscles, weakening them and causing conditions such as prolapse, incontinence, pelvic pain, pain with intercourse or vaginal fistula.</p>
+            
+            <h2>What are symptoms of maternal pelvic floor trauma?</h2>
+            <p>Issues stemming from maternal pelvic floor trauma can develop throughout a woman's lifetime.</p>
+            
+            <p>Symptoms for this condition can vary, and may include one or more of the following:</p>
+            <ul>
+                <li>Urinary problems—these include urine leakage when coughing, sneezing or laughing (stress incontinence).</li>
+                <li>Bowel problems—fecal incontinence from maternal pelvic floor trauma results in losing stool involuntarily.</li>
+                <li>Prolapse—women who have a prolapse will have symptoms that include pelvic pressure and a pelvic organ that bulges out of the vagina.</li>
+                <li>Pain—some women experience pain with intercourse as a result of tears or cuts to the vagina and perineum during childbirth.</li>
+            </ul>
+            
+            <h2>What causes maternal pelvic floor trauma?</h2>
+            <p>Common factors that can increase the risk of maternal pelvic floor trauma include:</p>
+            <ul>
+                <li>Pregnancy</li>
+                <li>Vaginal birth</li>
+                <li>Advanced maternal age</li>
+                <li>Delivery with forceps or vacuum</li>
+                <li>Prolonged pushing (second stage) during labor</li>
+                <li>Obesity</li>
+                <li>Delivering a large baby</li>
+                <li>Deep, excessive vaginal tears</li>
+            </ul>
+            
+            <h2>How is maternal pelvic floor trauma diagnosed?</h2>
+            <p>Pelvic floor trauma can often be diagnosed via a physical examination by your gynecologist, urogynecologist, or urologist. Depending on your symptoms and medical history, your doctor may order additional tests, such as urodynamic testing or cystoscopy (bladder testing), to properly diagnose your condition.</p>
+            
+            <h2>How is maternal pelvic floor trauma treated?</h2>
+            <p>Treatment for maternal pelvic floor trauma depends on the nature of the injury. Behavioral modification is often the first step, and physical therapy is frequently recommended to help retrain and strengthen the muscles as part of a treatment plan.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="genitourinary-syndrome" class="page-content">
+        <div class="inner-hero">
+            <h1>Genitourinary Syndrome of Menopause</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is genitourinary syndrome of menopause?</h2>
+            <p>According to the North American Menopause Society, genitourinary syndrome of menopause (GSM) is a condition describing the symptoms and signs of decreased estrogen on the female genitourinary tract, including the vagina, labia, urethra, and bladder.</p>
+            
+            <h2>What are the symptoms of genitourinary syndrome of menopause?</h2>
+            <p>There are many symptoms of GSM, many of which mimic those of urinary tract infections. The most common symptoms include:</p>
+            <ul>
+                <li>Vaginal dryness</li>
+                <li>Vaginal burning and irritation</li>
+                <li>Burning with urination</li>
+                <li>Urinary frequency and urgency</li>
+                <li>Recurrent urinary tract infections (UTIs)</li>
+                <li>Pain and dryness with sexual activity</li>
+            </ul>
+            
+            <h2>How is genitourinary syndrome of menopause diagnosed?</h2>
+            <p>Your doctor can generally diagnose genitourinary syndrome of menopause with a history and pelvic examination. The patient history can help your doctor identify symptoms while the pelvic examination may identify findings consistent with GSM and eliminate other pathologic conditions that may cause similar symptoms.</p>
+            
+            <h2>How is genitourinary syndrome of menopause treated?</h2>
+            <p>There are number of treatment options for genitourinary syndrome of menopause.</p>
+            
+            <p>Non-hormonal treatments include vaginal lubricants or moisturizers. Many of these are over-the-counter. Your doctor can make specific recommendations to you.</p>
+            
+            <p>Hormonal treatments include vaginal estrogen, administered as either a cream or tablet with an applicator or a vaginal ring. Once prescribed, vaginal estrogen should be used as lifelong therapy. Vaginal estrogen, which is different than oral estrogen, acts locally in the vagina with only a small amount absorbed into the bloodstream. If used regularly, estrogen bloodstream levels are similar to those of postmenopausal patients not using vaginal estrogen. There are a multitude of high-quality studies demonstrating that vaginal estrogen does not increase your risk of blood clots, breast cancer, or uterine cancer. However, many studies have shown that vaginal estrogen is very effective at reducing symptoms of GSM and recurrent UTIs.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="mesh-complications" class="page-content">
+        <div class="inner-hero">
+            <h1>Mesh Complications</h1>
+        </div>
+        <section class="content-section">
+            <h2>What are mesh complications?</h2>
+            <p>Surgical mesh is sometimes used in pelvic floor surgery to provide support for prolapse or incontinence treatment. While mesh can be effective, some patients may experience complications including pain, mesh erosion, infection, or mesh contraction.</p>
+            
+            <h3>Symptoms of Mesh Complications</h3>
+            <ul>
+                <li>Chronic pelvic pain</li>
+                <li>Pain during intercourse</li>
+                <li>Vaginal discharge or bleeding</li>
+                <li>Urinary problems</li>
+                <li>Mesh erosion or exposure</li>
+                <li>Recurrent infections</li>
+            </ul>
+
+            <h3>Treatment Options</h3>
+            <p>Dr. Tabakin specializes in the evaluation and treatment of mesh complications. Treatment options may include conservative management, mesh removal (partial or complete), or reconstructive surgery. Each case is evaluated individually to determine the best approach.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="urinary-retention" class="page-content">
+        <div class="inner-hero">
+            <h1>Urinary Retention & Voiding Dysfunction</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is urinary retention?</h2>
+            <p>Urinary retention occurs when you are unable to completely empty your bladder. This can be acute (sudden inability to urinate) or chronic (difficulty emptying the bladder over time). Voiding dysfunction encompasses various problems with bladder emptying.</p>
+            
+            <h3>Symptoms</h3>
+            <ul>
+                <li>Difficulty starting urination</li>
+                <li>Weak or intermittent urine stream</li>
+                <li>Feeling of incomplete bladder emptying</li>
+                <li>Frequent urination in small amounts</li>
+                <li>Urinary urgency</li>
+                <li>Lower abdominal discomfort</li>
+            </ul>
+
+            <h3>Causes</h3>
+            <p>Urinary retention can be caused by various factors including pelvic organ prolapse, neurological conditions, medications, prior pelvic surgery, or bladder dysfunction. Dr. Tabakin will perform a thorough evaluation to identify the underlying cause and develop an appropriate treatment plan.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="recurrent-uti" class="page-content">
+        <div class="inner-hero">
+            <h1>Recurrent Urinary Tract Infections</h1>
+        </div>
+        <section class="content-section">
+            <h2>What are recurrent UTIs?</h2>
+            <p>Recurrent urinary tract infections (UTIs) are defined as having two or more infections in six months or three or more in one year. These frequent infections can significantly impact quality of life and may indicate an underlying condition that needs to be addressed.</p>
+            
+            <h3>Common Symptoms</h3>
+            <ul>
+                <li>Frequent, urgent need to urinate</li>
+                <li>Burning sensation during urination</li>
+                <li>Cloudy or strong-smelling urine</li>
+                <li>Pelvic pain or pressure</li>
+                <li>Blood in urine</li>
+                <li>Low-grade fever</li>
+            </ul>
+
+            <h3>Risk Factors and Causes</h3>
+            <p>Women are more prone to recurrent UTIs due to anatomical factors. Other risk factors include pelvic organ prolapse, incomplete bladder emptying, menopause, sexual activity, and certain types of birth control. Dr. Tabakin specializes in identifying and treating the underlying causes of recurrent UTIs.</p>
+
+            <h3>Treatment Approaches</h3>
+            <p>Treatment may include lifestyle modifications, vaginal estrogen therapy for postmenopausal women, preventive antibiotics, treatment of underlying conditions like prolapse, and other specialized interventions based on the cause of recurrent infections.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="bph" class="page-content">
+        <div class="inner-hero">
+            <h1>Benign Prostatic Hyperplasia (BPH)</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is BPH?</h2>
+            <p>Benign prostatic hyperplasia (BPH) is a non-cancerous enlargement of the prostate gland that commonly affects men as they age. The enlarged prostate can compress the urethra and cause urinary symptoms.</p>
+            
+            <h3>Symptoms</h3>
+            <ul>
+                <li>Frequent or urgent need to urinate</li>
+                <li>Difficulty starting urination</li>
+                <li>Weak urine stream</li>
+                <li>Incomplete bladder emptying</li>
+                <li>Frequent nighttime urination (nocturia)</li>
+                <li>Dribbling at the end of urination</li>
+                <li>Urinary retention</li>
+            </ul>
+
+            <h3>Treatment Options</h3>
+            <p>Dr. Tabakin offers comprehensive evaluation and treatment for BPH. Treatment options range from watchful waiting and medications to minimally invasive procedures and surgery, depending on the severity of symptoms and patient preferences.</p>
+
+            <p><em>Note: Dr. Tabakin treats both male and female urological conditions, bringing comprehensive expertise in pelvic health and urinary dysfunction to patients of all genders.</em></p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <!-- Treatment Pages -->
+    <div id="robotic-surgery" class="page-content">
+        <div class="inner-hero">
+            <h1>Robotic Surgery</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is robotic surgery?</h2>
+            <p>Robotic-assisted surgery is a form of minimally invasive surgery, performed through a few small incisions. During robotic-assisted surgery, your surgeon controls the da Vinci surgical system through a special console in the room.</p>
+            
+            <h2>What makes robotic surgery different than open surgery?</h2>
+            <p>The da Vinci's vision capabilities give your surgeon a highly magnified, crystal-clear, 3D view while operating, so he or she can see the fine details of your surgery. Your surgeon uses tiny instruments that fit through small incisions to make precise movements and access hard-to-reach places beyond the limits of the human hand.</p>
+            
+            <h2>What are the benefits of robotic surgery to patients?</h2>
+            <p>Robotic surgery has been associated with shorter length of hospital stay, fewer complications, and lower blood loss.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="vaginal-surgery" class="page-content">
+        <div class="inner-hero">
+            <h1>Vaginal Surgery</h1>
+        </div>
+        <section class="content-section">
+            <h2>Vaginal Hysterectomy</h2>
+            <p>This method involves the surgeon removing the uterus entirely through your vagina. It does not require any incisions, but cannot be done if your uterus is too large to be safely removed through the vagina.</p>
+            
+            <h2>Uterosacral Ligament Suspension</h2>
+            <p>During a uterosacral suspension, a vaginal hysterectomy is first performed to remove the uterus. Then, the top of the vagina is lifted with sutures and attached to ligaments in the pelvis, returning the vagina to its normal position.</p>
+            
+            <h2>Sacrospinous Ligament Fixation</h2>
+            <p>A sacrospinous suspension, also known as a sacrospinous ligament fixation, is a surgery that is performed to restore support to vaginal walls that have been affected by prolapse, or a bulging that occurs in the vagina. During this procedure, an incision is made in the vagina, and the vagina is lifted up and reattached to the sacrospinous ligament (a connective tissue in the body that is attached to the lower pelvis, bottom of the spine and tailbone) with stitches.</p>
+            
+            <h2>Cystocele Repair (Dropped Bladder)</h2>
+            <p>This type of surgery lifts the bladder back into place by placing stitches in the top part of the vagina. A cystocele repair is commonly performed at the same time as a mid-urethral sling insertion for stress urinary incontinence.</p>
+            
+            <h2>Rectocele Repair</h2>
+            <p>This type of surgery lifts the rectum back into place by placing stitches in the back part of the vagina.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="prolapse-surgery" class="page-content">
+        <div class="inner-hero">
+            <h1>Prolapse Surgery</h1>
+        </div>
+        <section class="content-section">
+            <!-- Video Section -->
+            <div class="video-section" style="margin-bottom: 40px;">
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158237550?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;" title="Post-Operative Instructions after Pelvic Organ Prolapse Procedure"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>How is prolapse surgery performed?</h2>
+            <p>Prolapse surgery can either be performed <a href="#" onclick="showPage('vaginal-surgery'); return false;">vaginally</a> or through a <a href="#" onclick="showPage('robotic-surgery'); return false;">robotic (laparoscopic)</a> approach. Your doctor will help you make an informed decision regarding the best type of surgery for you.</p>
+            
+            <h2>Is mesh used in surgery for prolapse?</h2>
+            <p>Mesh may or may not be used during prolapse surgery depending on the type of prolapse you have and the surgical approach your doctor performs. Your doctor will discuss surgical options with and without mesh to ensure you are well-informed.</p>
+            
+            <h2>Will I have you stay over night after surgery?</h2>
+            <p>Length of stay depends on what type of surgery you undergo. Some surgeries are done as an outpatient (go home the same day), while others require a one night overnight stay in the hospital.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="midurethral-sling" class="page-content">
+        <div class="inner-hero">
+            <h1>Midurethral Sling</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is a mid-urethral sling?</h2>
+            <p>The tube connected to the bladder that allows you to urinate is called the urethra. When the support tissue below the urethra weakens, pressure from activities like coughing, sneezing and exercising cause the urethra to move up and down, opening it and allowing urine to leak out. This is known as stress incontinence.</p>
+            
+            <p>A mid-urethral sling is a mesh device surgically placed underneath the urethra to act as a supportive "hammock" so when you cough, sneeze or laugh, the urethra stays straight, in place and closed to prevent leakage. It's a minimally invasive procedure with a high success rate, and is therefore widely considered to be one of the best options when treating stress incontinence surgically.</p>
+            
+            <h2>Why is a mid-urethral sling performed?</h2>
+            <p>A mid-urethral sling is the most common surgical option for treating stress incontinence in women. The mesh does not break down in the body, which means the device holds steady over time. The procedure is minimally invasive, can be performed in about 15 to 30 minutes, and is done through a small incision in the vagina.</p>
+            
+            <p>Women who have a history of pelvic radiation or who may potentially need pelvic radiation in the future are not good candidates for a mid-urethral sling. If you've had issues with a mesh procedure before, your physicians would take this into account when considering whether to use this type of sling.</p>
+            
+            <h2>What should I expect after mid-urethral sling surgery?</h2>
+            <p>During the surgery, a small incision is made on the vaginal skin directly under the urethra. The sling is placed between the urethra and vagina, then the sling is brought up behind the pubic bone and secured. You won't be able to feel or see the mesh sling once it's in place. The incision inside the vagina is closed with stitches that dissolve over time.</p>
+            
+            <p>After the procedure, most patients are able to go home the same day. You might experience soreness, but you should be able to return to work and do normal activities within two to three weeks. Within a month of surgery, your stress incontinence symptoms should be resolved.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="urethral-bulking" class="page-content">
+        <div class="inner-hero">
+            <h1>Urethral Bulking</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is a urethral bulking agent?</h2>
+            <p>A urethral bulking agents is a gel-like or permanent filler-like substance that is injected into the urethra (channel through which you urinate) in order to prevent urine from leaking out.</p>
+            
+            <h2>Who may be a good candidate for a urethral bulking agent?</h2>
+            <p>Urethral bulking agents are used to treat stress urinary incontinence, which is leakage with activities such as laughing, coughing, or sneezing. This procedure will not treat urinary leakage from overactive bladder or urge incontinence. Typically, urethral bulking agents are used for women who:</p>
+            <ul>
+                <li>Have mild stress urinary incontinence</li>
+                <li>May want to consider future pregnancies</li>
+                <li>Women who do not want surgery with general anesthesia</li>
+                <li>Women who are not good candidates for surgery requiring anesthesia</li>
+            </ul>
+            
+            <h2>Where is a urethral bulking agent injection performed?</h2>
+            <p>Generally, we perform urethral bulking agent injections in the office under local anesthesia. Patients go home the same day and can immediately return back to their activities.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="sacral-neuromodulation" class="page-content">
+        <div class="inner-hero">
+            <h1>Sacral Neuromodulation</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is SNM?</h2>
+            <p>SNM is a clinically proven solution for treating symptoms of overactive bladder (including urinary urgency incontinence), bowel (fecal) incontinence and non-obstructive urinary retention.</p>
+            
+            <h2>What are the benefits of choosing SNM for my symptoms of overactive bladder, non-obstructive urinary retention, or fecal incontinence?</h2>
+            <ul>
+                <li>Small Size: Safely delivers therapy with a miniaturized implant</li>
+                <li>Long-Term Therapy: Designed to provide long-term symptom relief</li>
+                <li>Full-Body MRI: Eligible for full-body MRI under approved conditions</li>
+            </ul>
+            
+            <h2>How does SNM work?</h2>
+            <p>Sacral neuromodulation provides gentle stimulation to the nerves that control the bladder and bowel, which can restore normal control and result in symptom improvement.</p>
+            
+            <p><strong>The Evaluation Step:</strong> To see if SNM is right for you, you will undergo a short period of therapy using a temporary system. The evaluation period allows you to experience the level of symptom relief the therapy may provide before you commit to long-term therapy.</p>
+            
+            <p><strong>Long-term Therapy:</strong> If you and your doctor determine that SNM is right for you, you will have an outpatient procedure where the miniaturized SNM implant is placed just beneath the skin in the upper part of your buttock.</p>
+            
+            <h2>Who is a good candidate for SNM?</h2>
+            <p>Your doctor will help you decide if SNM is a good therapy for you. SNM is an approved treatment for patients suffering with:</p>
+            <ul>
+                <li>Overactive bladder: the urgent need to urinate which may result in frequent urination and/or incontinence (leakage) episodes</li>
+                <li>Urinary frequency: the need to urinate 8 or more times a day, which may or may not be associated with urgency</li>
+                <li>Urinary urgency incontinence (UUI): the urgent need to urinate or trouble holding urine before making it to the restroom</li>
+                <li>Fecal (bowel) incontinence: involuntary loss of stool which may or may not be associated with urgency</li>
+                <li>Non-obstructive urinary retention (UR): the inability to completely empty the bladder which may result in trouble urinating or frequent small voids</li>
+                <li>SNM may be indicated for patients who have failed conservative treatments, such as lifestyle changes, physical therapy, or medications.</li>
+            </ul>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="bladder-botox" class="page-content">
+        <div class="inner-hero">
+            <h1>Bladder Botox</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is botox, and why is it used in the bladder?</h2>
+            <p>Onabotulinum Toxin A, more commonly referred to as botox, can be used to treat both overactive bladder or neurogenic bladder.</p>
+            <ul>
+                <li>For overactive bladder patients, it is traditionally used after patients have not experienced symptoms relief with behavioral modifications and medications.</li>
+                <li>For patients with neurogenic bladder, botox injections can help relax the bladder and increase bladder capacity in order to protect the kidneys.</li>
+            </ul>
+            
+            <h2>How does bladder botox work?</h2>
+            <p>Botox is a neurotoxin that can be used to disrupt the activity of certain nerves. Injecting botox into the bladder helps to relax the bladder so that it doesn't contract as frequently. As a result, patients with overactive bladder experience less urinary frequency, urgency, and leakage episodes.</p>
+            
+            <h2>Where and how is this procedure performed?</h2>
+            <p>We perform the injections in our office as an outpatient procedure. When you arrive for your appointment, we will check your urine to ensure you don't have an infection prior to beginning. A numbing medication will be instilled into your bladder for several minutes. Then, a small camera called a cystoscope is inserted into the bladder. Then, your doctor will inject to the botox into several locations throughout the bladder-this takes about 5 minutes. You may have some minor burning with urination or blood in the urine for a few days following the procedure.</p>
+            
+            <h2>How often will I require botox injections in my bladder?</h2>
+            <p>The benefits from botox last anywhere from approximately 3 months to 1 year, with most patients needing re-injections every 6-8 months.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <div id="tibial-nerve-stimulation" class="page-content">
+        <div class="inner-hero">
+            <h1>Posterior Tibial Nerve Stimulation</h1>
+        </div>
+        <section class="content-section">
+            <h2>What is PTNS?</h2>
+            <p>Percutaneous tibial nerve stimulation (PTNS) is an FDA-approved method of treating an overactive bladder. It is similar to electrical stimulation of the pelvic floor, but does not require a device to be inserted into the vagina. Because the tibial nerve shares some of the same nerve supply as the bladder, when this nerve is stimulated in the ankle, it can help regulate bladder function. During PTNS, a very small, fine needle (similar to an acupuncture needle) is inserted into the ankle. A low-dose nerve stimulator (similar to a TENS unit used in physical therapy) is attached; it provides a mild electrical current to stimulate the nerve ending in the ankle. This electrical pulse then blocks nerve signals that are causing the bladder to be overactive. The procedure has been proven to be safe and effective in many high-level studies.</p>
+            
+            <h2>Why is PTNS done?</h2>
+            <p>PTNS is used to treat overactive bladder. Symptoms of overactive bladder may include:</p>
+            <ul>
+                <li>The urge to urinate frequently</li>
+                <li>Nighttime trips to the bathroom</li>
+                <li>A strong urge to go to the bathroom that cannot be suppressed</li>
+                <li>Urine leakage associated with urgency symptoms</li>
+            </ul>
+            <p>An overactive bladder can occur in people of all ages, from young children to adults, but is more likely to increase with age.</p>
+            
+            <h2>How should I prepare for PTNS?</h2>
+            <p>PTNS is performed in your doctor's office on an outpatient basis. You can expect to spend around 30 minutes receiving the treatment, which is not painful. In order to have the best results, you will need to repeat the treatment every 7-10 days for a total of 8-12 treatments. Some patients return for a single maintenance session every few months. While this involves several visits, obtaining good results without medications and without a more invasive option is appealing to many women.</p>
+            
+            <h2>What should I expect after PTNS treatment?</h2>
+            <p>PTNS is well tolerated by most people. You can expect to see a marked improvement in your bladder control and a reduction in the urgent need to urinate after completing the series of percutaneous tibial nerve stimulation treatments. You may need to have an additional PTNS session after a certain period of time. This timing varies by individual but may be anywhere from several months to a year after the initial series of treatments.</p>
+            
+            <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Central NJ Urogynecology</h3>
+                <p>Clinical Academic Building at<br>
+                Rutgers Robert Wood Johnson Medical School</p>
+                <p>125 Paterson Street, Suite 4100<br>
+                New Brunswick, NJ 08901</p>
+                <p style="margin-top: 20px;">
+                    <strong>Phone:</strong> <a href="tel:732-235-7775">732-235-7775</a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showPage('home'); return false;">Home</a></li>
+                    <li><a href="#" onclick="showPage('about'); return false;">About Dr. Tabakin</a></li>
+                    <li><a href="#" onclick="showPage('appointments'); return false;">Appointments</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p><a href="https://www.instagram.com/njurogynecology" target="_blank">Instagram</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 by Dr. Alexandra Tabakin, MD. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.classList.add('active');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.querySelector('.hamburger');
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+            
+            // Close all mobile dropdowns
+            document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+            document.querySelectorAll('.mobile-toggle').forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+
+        function toggleMobileDropdown(dropdownId, event) {
+            // Only handle on mobile
+            if (window.innerWidth > 768) {
+                return;
+            }
+            
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const dropdown = document.getElementById(dropdownId);
+            const button = event.currentTarget;
+            
+            // Close other dropdowns
+            document.querySelectorAll('.mobile-dropdown').forEach(d => {
+                if (d.id !== dropdownId) {
+                    d.classList.remove('active');
+                }
+            });
+            document.querySelectorAll('.mobile-toggle').forEach(btn => {
+                if (btn !== button) {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+            button.classList.toggle('active');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
+            event.target.reset();
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Set initial page
+        showPage('home');
+    </script>
+</body>
+</html>
