@@ -2826,6 +2826,15 @@
                 </ul>
             </div>
 
+            <!-- Second Video - Treatment Options -->
+            <div class="video-section" style="margin: 40px 0;">
+                <div class="video-container">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/1158223779?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:12px;" title="POP Treatment Options"></iframe>
+                    </div>
+                </div>
+            </div>
+
             <button class="btn btn-primary" onclick="showPage('appointments')">Schedule a Consultation</button>
         </section>
     </div>
@@ -2860,32 +2869,32 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>First Name *</label>
-                            <input type="text" required>
+                            <input type="text" name="firstName" required>
                         </div>
                         <div class="form-group">
                             <label>Last Name *</label>
-                            <input type="text" required>
+                            <input type="text" name="lastName" required>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label>Phone *</label>
-                        <input type="tel" required>
+                        <input type="tel" name="phone" required>
                     </div>
                     
                     <div class="form-group">
                         <label>Email *</label>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                     </div>
                     
                     <div class="form-group">
                         <label>Birthday *</label>
-                        <input type="date" required>
+                        <input type="date" name="birthday" required>
                     </div>
                     
                     <div class="form-group">
                         <label>Appointment Reason *</label>
-                        <textarea required></textarea>
+                        <textarea name="reason" required></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
@@ -3578,8 +3587,44 @@
 
         function handleFormSubmit(event) {
             event.preventDefault();
-            alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
-            event.target.reset();
+            
+            // Get form data
+            const form = event.target;
+            const formData = {
+                firstName: form.querySelector('input[type="text"]').value,
+                lastName: form.querySelectorAll('input[type="text"]')[1].value,
+                phone: form.querySelector('input[type="tel"]').value,
+                email: form.querySelector('input[type="email"]').value,
+                birthday: form.querySelector('input[type="date"]').value,
+                reason: form.querySelector('textarea').value
+            };
+            
+            // Disable submit button
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            // Send to Google Apps Script
+            fetch('https://script.google.com/macros/s/AKfycbxBtLj1e5GjEPBxlB6M786DpzWBsdlcGQu6flKJPRqs2vv-N4OfAeY8XP84QZzJud_x/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(() => {
+                alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Request';
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('There was an error submitting your request. Please call us at 732-235-7775 to schedule your appointment.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Request';
+            });
         }
 
         // Close mobile menu when clicking outside
