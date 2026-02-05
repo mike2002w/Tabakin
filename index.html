@@ -19,6 +19,16 @@
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="IwJdRhQP0d-s7iBEWLsL10qyqHbIDH3noPqYL3hLS4g" />
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBYF0412DJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-YBYF0412DJ');
+    </script>
+    
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Central NJ Urogynecology | Dr. Alexandra Tabakin">
     <meta property="og:description" content="Expert urogynecology care for pelvic floor disorders. Fellowship-trained specialist at Rutgers Robert Wood Johnson Medical School.">
@@ -2398,7 +2408,7 @@
     <div class="top-bar">
         <div class="top-bar-content">
             <div>APPOINTMENTS</div>
-            <a href="tel:732-235-7775" class="phone-number">732-235-7775</a>
+            <a href="tel:732-235-7775" class="phone-number" onclick="gtag('event', 'phone_click', {'event_category': 'contact', 'event_label': 'Top Bar Phone'});">732-235-7775</a>
         </div>
     </div>
 
@@ -3733,6 +3743,15 @@
             })
             .then(() => {
                 console.log('Form submitted successfully');
+                
+                // Track form submission in Google Analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submission', {
+                        'event_category': 'appointment',
+                        'event_label': 'Appointment Request Form'
+                    });
+                }
+                
                 alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
                 form.reset();
                 submitBtn.disabled = false;
