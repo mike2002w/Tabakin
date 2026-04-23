@@ -34,14 +34,14 @@
     <meta property="og:description" content="Expert urogynecology care for pelvic floor disorders. Fellowship-trained specialist at Rutgers Robert Wood Johnson Medical School.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://centralnjurogynecology.com">
-    <meta property="og:image" content="https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg">
+    <meta property="og:image" content="https://centralnjurogynecology.com/images/tabakin-headshot.jpg">
     <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Central NJ Urogynecology | Dr. Alexandra Tabakin">
     <meta name="twitter:description" content="Expert urogynecology care for pelvic floor disorders in Central New Jersey.">
-    <meta name="twitter:image" content="https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg">
+    <meta name="twitter:image" content="https://centralnjurogynecology.com/images/tabakin-headshot.jpg">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://centralnjurogynecology.com">
@@ -2324,82 +2324,102 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "Central NJ Urogynecology",
-      "image": "https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg",
-      "url": "https://centralnjurogynecology.com",
-      "telephone": "+17322357775",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "125 Paterson Street, Suite 4100",
-        "addressLocality": "New Brunswick",
-        "addressRegion": "NJ",
-        "postalCode": "08901",
-        "addressCountry": "US"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 40.4862,
-        "longitude": -74.4518
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "17:00"
-      },
-      "priceRange": "$$",
-      "medicalSpecialty": "Urogynecology"
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. Alexandra Tabakin",
-      "image": "https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg",
-      "medicalSpecialty": ["Urogynecology", "Urology", "Female Pelvic Medicine and Reconstructive Surgery"],
-      "worksFor": {
-        "@type": "MedicalOrganization",
-        "name": "Rutgers Robert Wood Johnson Medical School"
-      },
-      "jobTitle": "Assistant Professor of Surgery, Division of Urology",
-      "alumniOf": [
+      "@graph": [
         {
-          "@type": "EducationalOrganization",
-          "name": "Rutgers Medical School"
+          "@type": "MedicalClinic",
+          "@id": "https://centralnjurogynecology.com/#clinic",
+          "name": "Central NJ Urogynecology",
+          "image": "https://centralnjurogynecology.com/images/tabakin-headshot.jpg",
+          "url": "https://centralnjurogynecology.com",
+          "telephone": "+17322357775",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "125 Paterson Street, Suite 4100",
+            "addressLocality": "New Brunswick",
+            "addressRegion": "NJ",
+            "postalCode": "08901",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.4862,
+            "longitude": -74.4518
+          },
+          "hasMap": "https://www.google.com/maps/search/?api=1&query=125+Paterson+Street+Suite+4100+New+Brunswick+NJ+08901",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+          },
+          "priceRange": "$$",
+          "medicalSpecialty": "Urogynecology",
+          "parentOrganization": {
+            "@type": "MedicalOrganization",
+            "name": "Rutgers Robert Wood Johnson Medical School",
+            "url": "https://rwjms.rutgers.edu/"
+          },
+          "physician": {"@id": "https://centralnjurogynecology.com/#physician"},
+          "potentialAction": {
+            "@type": "ReserveAction",
+            "target": "https://centralnjurogynecology.com/#appointments",
+            "name": "Request an appointment"
+          }
         },
         {
-          "@type": "EducationalOrganization",
-          "name": "Thomas Jefferson University Hospital"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "name": "Cornell University / NYU Langone Health"
+          "@type": "Physician",
+          "@id": "https://centralnjurogynecology.com/#physician",
+          "name": "Dr. Alexandra Tabakin",
+          "givenName": "Alexandra",
+          "familyName": "Tabakin",
+          "honorificSuffix": "MD",
+          "image": "https://centralnjurogynecology.com/images/tabakin-headshot.jpg",
+          "medicalSpecialty": ["Urogynecology", "Urology", "Female Pelvic Medicine and Reconstructive Surgery"],
+          "worksFor": {"@id": "https://centralnjurogynecology.com/#clinic"},
+          "workLocation": {"@id": "https://centralnjurogynecology.com/#clinic"},
+          "jobTitle": "Assistant Professor of Surgery, Division of Urology",
+          "affiliation": {
+            "@type": "MedicalOrganization",
+            "name": "Rutgers Robert Wood Johnson Medical School",
+            "url": "https://rwjms.rutgers.edu/"
+          },
+          "alumniOf": [
+            {"@type": "EducationalOrganization", "name": "Rutgers Robert Wood Johnson Medical School"},
+            {"@type": "EducationalOrganization", "name": "Thomas Jefferson University Hospital"},
+            {"@type": "EducationalOrganization", "name": "NewYork-Presbyterian / Weill Cornell Medical Center"},
+            {"@type": "EducationalOrganization", "name": "NYU Langone Health"}
+          ],
+          "knowsAbout": [
+            "Pelvic Organ Prolapse",
+            "Urinary Incontinence",
+            "Stress Urinary Incontinence",
+            "Overactive Bladder",
+            "Pelvic Floor Disorders",
+            "Vaginal Fistula",
+            "Urethral Diverticulum",
+            "Maternal Pelvic Floor Trauma",
+            "Genitourinary Syndrome of Menopause",
+            "Robotic Pelvic Surgery",
+            "Vaginal Surgery",
+            "Midurethral Sling",
+            "Urethral Bulking",
+            "Sacral Neuromodulation",
+            "Bladder Botox",
+            "Tibial Nerve Stimulation",
+            "Female Pelvic Medicine and Reconstructive Surgery"
+          ],
+          "url": "https://centralnjurogynecology.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "125 Paterson Street, Suite 4100",
+            "addressLocality": "New Brunswick",
+            "addressRegion": "NJ",
+            "postalCode": "08901",
+            "addressCountry": "US"
+          },
+          "telephone": "+17322357775"
         }
-      ],
-      "knowsAbout": [
-        "Pelvic Organ Prolapse",
-        "Urinary Incontinence",
-        "Overactive Bladder",
-        "Stress Urinary Incontinence",
-        "Pelvic Floor Disorders",
-        "Robotic Surgery",
-        "Vaginal Surgery",
-        "Urogynecology",
-        "Female Pelvic Medicine"
-      ],
-      "url": "https://centralnjurogynecology.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "125 Paterson Street, Suite 4100",
-        "addressLocality": "New Brunswick",
-        "addressRegion": "NJ",
-        "postalCode": "08901",
-        "addressCountry": "US"
-      },
-      "telephone": "+17322357775"
+      ]
     }
     </script>
 </head>
@@ -2498,7 +2518,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg" 
+                    <img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg" 
                          alt="Dr. Alexandra Tabakin">
                 </div>
             </div>
@@ -2771,7 +2791,7 @@
         <section class="content-section">
             <div class="two-column">
                 <div class="doctor-image-container">
-                    <img src="https://static.wixstatic.com/media/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg/v1/fill/w_400,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/a530f6_b1ea9a836f57421881b0a657270052d9~mv2.jpeg" 
+                    <img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg" 
                          alt="Dr. Alexandra Tabakin">
                 </div>
                 <div>
