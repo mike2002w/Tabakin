@@ -448,153 +448,6 @@
             transform: translateY(-5px);
         }
 
-        /* Hero video trigger — turns the headshot into a click-to-play poster */
-        .hero-video-trigger {
-            position: relative;
-            display: inline-block;
-            padding: 0;
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            font-family: inherit;
-            border-radius: 16px;
-            transition: transform 0.3s ease;
-        }
-
-        .hero-video-trigger:hover {
-            transform: translateY(-5px);
-        }
-
-        .hero-video-trigger:hover .hero-video-play {
-            transform: translate(-50%, -50%) scale(1.08);
-            background: var(--primary-medium);
-        }
-
-        .hero-video-trigger img {
-            display: block;
-            transition: none;
-        }
-
-        .hero-video-trigger img:hover {
-            transform: none;
-        }
-
-        .hero-video-play {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: rgba(142, 36, 170, 0.95);
-            color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-            transition: transform 0.25s ease, background 0.25s ease;
-            pointer-events: none;
-        }
-
-        .hero-video-play svg {
-            margin-left: 4px; /* optically center the play triangle */
-        }
-
-        .hero-video-caption {
-            position: absolute;
-            left: 50%;
-            bottom: 16px;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.72);
-            color: #FFFFFF;
-            font-size: 13px;
-            font-weight: 500;
-            padding: 6px 14px;
-            border-radius: 20px;
-            white-space: nowrap;
-            pointer-events: none;
-        }
-
-        .hero-video-trigger:focus-visible {
-            outline: 3px solid var(--primary-medium);
-            outline-offset: 4px;
-        }
-
-        /* Video lightbox modal */
-        .video-modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            opacity: 0;
-            transition: opacity 0.25s ease;
-        }
-
-        .video-modal.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .video-modal-inner {
-            position: relative;
-            width: 100%;
-            max-width: 1000px;
-            aspect-ratio: 16 / 9;
-        }
-
-        .video-modal iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-modal-close {
-            position: absolute;
-            top: -48px;
-            right: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 2px solid #FFFFFF;
-            background: transparent;
-            color: #FFFFFF;
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 1;
-            cursor: pointer;
-            transition: background 0.2s ease;
-        }
-
-        .video-modal-close:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        @media (max-width: 640px) {
-            .hero-video-play {
-                width: 64px;
-                height: 64px;
-            }
-
-            .hero-video-play svg {
-                width: 22px;
-                height: 22px;
-            }
-
-            .hero-video-caption {
-                font-size: 12px;
-                padding: 5px 12px;
-            }
-        }
-
         /* Video preview container (replaces doctor image in About section) */
         .video-preview-container {
             position: relative;
@@ -2742,16 +2595,8 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <button type="button" class="hero-video-trigger" onclick="openHeroVideo()" aria-label="Play introduction video with Dr. Tabakin">
-                        <img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg"
-                             alt="Dr. Alexandra Tabakin">
-                        <span class="hero-video-play" aria-hidden="true">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </span>
-                        <span class="hero-video-caption">Watch Dr. Tabakin's introduction</span>
-                    </button>
+                    <img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg"
+                         alt="Dr. Alexandra Tabakin">
                 </div>
             </div>
         </section>
@@ -3033,49 +2878,7 @@
         </div>
     </footer>
 
-    <!-- Hero video lightbox -->
-    <div class="video-modal" id="heroVideoModal" role="dialog" aria-modal="true" aria-label="Dr. Tabakin introduction video" onclick="if(event.target===this)closeHeroVideo()">
-        <div class="video-modal-inner">
-            <button type="button" class="video-modal-close" onclick="closeHeroVideo()" aria-label="Close video">&times;</button>
-            <!-- iframe src is injected on open and cleared on close so the video stops playing -->
-            <iframe id="heroVideoFrame" src="" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Dr. Alexandra Tabakin introduction"></iframe>
-        </div>
-    </div>
-
     <script>
-        // Hero video lightbox — lazy-load the Vimeo iframe on click so the page
-        // itself stays fast (Vimeo embed is ~400KB). Clearing src on close stops
-        // the video from continuing to play in the background.
-        (function () {
-            var HERO_VIDEO_SRC = 'https://player.vimeo.com/video/1158218957?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1';
-            var modal = document.getElementById('heroVideoModal');
-            var frame = document.getElementById('heroVideoFrame');
-
-            window.openHeroVideo = function () {
-                frame.src = HERO_VIDEO_SRC;
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'hero_video_play', {
-                        event_category: 'engagement',
-                        event_label: 'Dr. Tabakin intro'
-                    });
-                }
-            };
-
-            window.closeHeroVideo = function () {
-                modal.classList.remove('active');
-                frame.src = '';
-                document.body.style.overflow = '';
-            };
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    window.closeHeroVideo();
-                }
-            });
-        })();
-
         // Legacy hash URLs (index.html#pelvic-organ-prolapse) redirect to their
         // standalone page (pelvic-organ-prolapse.html) for SEO-clean URLs.
         (function () {
