@@ -20,13 +20,17 @@
     <meta name="google-site-verification" content="IwJdRhQP0d-s7iBEWLsL10qyqHbIDH3noPqYL3hLS4g" />
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBYF0412DJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'G-YBYF0412DJ');
+      if (['centralnjurogynecology.com','www.centralnjurogynecology.com'].includes(location.hostname)) {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YBYF0412DJ';
+        document.head.appendChild(gaScript);
+        gtag('js', new Date());
+        gtag('config', 'G-YBYF0412DJ');
+      }
     </script>
     
     <!-- Open Graph Meta Tags for Social Media -->
@@ -128,6 +132,8 @@
         }
 
         .logo {
+            text-decoration: none;
+            display: inline-block;
             font-family: 'Crimson Pro', serif;
             font-size: 20px;
             font-weight: 600;
@@ -138,6 +144,8 @@
         /* Hamburger Menu */
         .hamburger {
             display: none;
+            background: none;
+            border: 0;
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
@@ -2439,7 +2447,7 @@
           "physician": {"@id": "https://centralnjurogynecology.com/#physician"},
           "potentialAction": {
             "@type": "ReserveAction",
-            "target": "https://centralnjurogynecology.com/#appointments",
+            "target": "https://centralnjurogynecology.com/appointments.html",
             "name": "Request an appointment"
           }
         },
@@ -2512,11 +2520,11 @@
     <nav>
         <div class="nav-content">
             <a href="index.html" class="logo">Central NJ Urogynecology</a>
-            <div class="hamburger" onclick="toggleMobileMenu()">
+            <button class="hamburger" type="button" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -2606,6 +2614,51 @@
             </div>
 
             <!-- Insurance Accepted -->
+            <div class="appointment-form">
+                <h2 style="text-align: center; margin-bottom: 14px;">Request an Appointment</h2>
+                <p style="text-align: center; font-size: 15px; color: var(--neutral-medium); line-height: 1.6; max-width: 560px; margin: 0 auto 28px;">
+                    Your request goes privately to our office staff and is used only to schedule your visit.
+                    There is no need to include medical details here; you can share those with Dr. Tabakin in person.
+                    Our office will contact you during business hours, Monday to Friday, 9am to 5pm.
+                </p>
+                <form onsubmit="handleFormSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="apptFirstName">First Name *</label>
+                            <input type="text" id="apptFirstName" name="firstName" autocomplete="given-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apptLastName">Last Name *</label>
+                            <input type="text" id="apptLastName" name="lastName" autocomplete="family-name" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apptPhone">Phone *</label>
+                        <input type="tel" id="apptPhone" name="phone" autocomplete="tel" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apptEmail">Email *</label>
+                        <input type="email" id="apptEmail" name="email" autocomplete="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apptDob">Date of Birth *</label>
+                        <input type="date" id="apptDob" name="birthday" autocomplete="bday" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apptReason">Reason for Visit *</label>
+                        <textarea id="apptReason" name="reason" placeholder="A few words is plenty, for example: bladder leakage, prolapse, second opinion" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                    <div id="formStatus" role="status" aria-live="polite" style="display: none; margin-top: 18px; padding: 14px 18px; border-radius: 8px; font-size: 15px; line-height: 1.55;"></div>
+                </form>
+            </div>
+
+            <!-- Insurance Accepted -->
             <div id="insurance" style="max-width: 900px; margin: 60px auto 40px; padding: 0 20px;">
                 <h2 style="margin-bottom: 12px; text-align: center; color: var(--primary-dark);">Insurance Plans Accepted</h2>
                 <p style="text-align: center; max-width: 640px; margin: 0 auto 32px; color: var(--neutral-medium);">
@@ -2646,43 +2699,7 @@
                 </p>
             </div>
 
-            <div class="appointment-form">
-                <h2 style="text-align: center; margin-bottom: 30px;">Request an Appointment</h2>
-                <form onsubmit="handleFormSubmit(event)">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>First Name *</label>
-                            <input type="text" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Last Name *</label>
-                            <input type="text" name="lastName" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Phone *</label>
-                        <input type="tel" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Birthday *</label>
-                        <input type="date" name="birthday" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Appointment Reason *</label>
-                        <textarea name="reason" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
-                </form>
-            </div>
+            
         </section>
     
     </div>
@@ -2746,6 +2763,7 @@
             const hamburger = document.querySelector('.hamburger');
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
         }
 
         function closeMobileMenu() {
@@ -2794,8 +2812,6 @@
 
         function handleFormSubmit(event) {
             event.preventDefault();
-            
-            // Get form data
             const form = event.target;
             const formData = {
                 firstName: form.querySelector('input[name="firstName"]').value,
@@ -2805,43 +2821,41 @@
                 birthday: form.querySelector('input[name="birthday"]').value,
                 reason: form.querySelector('textarea[name="reason"]').value
             };
-            
-            console.log('Form data being sent:', formData);
-            
-            // Disable submit button
             const submitBtn = form.querySelector('button[type="submit"]');
+            const statusEl = document.getElementById('formStatus');
             const originalText = submitBtn.textContent;
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
-            
-            // Send to Google Apps Script
+            statusEl.style.display = 'none';
+
+            function showStatus(ok, html) {
+                statusEl.style.display = 'block';
+                statusEl.style.background = ok ? '#EDF7ED' : '#FDECEA';
+                statusEl.style.border = ok ? '1px solid #A5D6A7' : '1px solid #EF9A9A';
+                statusEl.style.color = ok ? '#1B5E20' : '#B71C1C';
+                statusEl.innerHTML = html;
+            }
+
             fetch('https://script.google.com/macros/s/AKfycbxedkLZL9MXuf_sg3Wc_7w_ErW_VfR5Ba0QagNtDJyrCkodqpdmmAvZpU0GLiqIIdG-wA/exec', {
                 method: 'POST',
                 mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
             })
             .then(() => {
-                console.log('Form submitted successfully');
-                
-                // Track form submission in Google Analytics
                 if (typeof gtag !== 'undefined') {
                     gtag('event', 'form_submission', {
                         'event_category': 'appointment',
                         'event_label': 'Appointment Request Form'
                     });
                 }
-                
-                alert('Thank you for your appointment request! We will contact you shortly to confirm your appointment.');
+                showStatus(true, 'Your request has been sent. Our office will contact you during business hours, Monday to Friday, 9am to 5pm. If you have not heard from us within 2 business days, please call <a href="tel:732-235-7775" style="color:#1B5E20; font-weight:600;">732-235-7775</a>.');
                 form.reset();
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
             })
-            .catch((error) => {
-                console.error('Error submitting form:', error);
-                alert('There was an error submitting your request. Please call us at 732-235-7775 to schedule your appointment.');
+            .catch(() => {
+                showStatus(false, 'Your request could not be sent. Please call <a href="tel:732-235-7775" style="color:#B71C1C; font-weight:600;">732-235-7775</a> to schedule your appointment.');
+            })
+            .finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
             });

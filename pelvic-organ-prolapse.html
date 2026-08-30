@@ -20,13 +20,17 @@
     <meta name="google-site-verification" content="IwJdRhQP0d-s7iBEWLsL10qyqHbIDH3noPqYL3hLS4g" />
     
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YBYF0412DJ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-      gtag('config', 'G-YBYF0412DJ');
+      if (['centralnjurogynecology.com','www.centralnjurogynecology.com'].includes(location.hostname)) {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YBYF0412DJ';
+        document.head.appendChild(gaScript);
+        gtag('js', new Date());
+        gtag('config', 'G-YBYF0412DJ');
+      }
     </script>
     
     <!-- Open Graph Meta Tags for Social Media -->
@@ -128,6 +132,8 @@
         }
 
         .logo {
+            text-decoration: none;
+            display: inline-block;
             font-family: 'Crimson Pro', serif;
             font-size: 20px;
             font-weight: 600;
@@ -138,6 +144,8 @@
         /* Hamburger Menu */
         .hamburger {
             display: none;
+            background: none;
+            border: 0;
             flex-direction: column;
             gap: 5px;
             cursor: pointer;
@@ -2526,7 +2534,7 @@
           "physician": {"@id": "https://centralnjurogynecology.com/#physician"},
           "potentialAction": {
             "@type": "ReserveAction",
-            "target": "https://centralnjurogynecology.com/#appointments",
+            "target": "https://centralnjurogynecology.com/appointments.html",
             "name": "Request an appointment"
           }
         },
@@ -2626,11 +2634,11 @@
     <nav>
         <div class="nav-content">
             <a href="index.html" class="logo">Central NJ Urogynecology</a>
-            <div class="hamburger" onclick="toggleMobileMenu()">
+            <button class="hamburger" type="button" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -2774,7 +2782,8 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary" onclick="window.location.href='appointments.html'">Schedule a Consultation</button>
+            <p style="margin: 30px 0 18px; font-size: 16px;"><strong>Related pages:</strong> <a href="prolapse-surgery.html" style="color: var(--primary-medium);">Prolapse Surgery</a> &middot; <a href="robotic-surgery.html" style="color: var(--primary-medium);">Robotic Surgery</a> &middot; <a href="vaginal-surgery.html" style="color: var(--primary-medium);">Vaginal Surgery</a></p>
+                    <a class="btn btn-primary" href="appointments.html">Schedule a Consultation</a>
         </section>
     
     </div>
@@ -2860,6 +2869,7 @@
             const hamburger = document.querySelector('.hamburger');
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
         }
 
         function closeMobileMenu() {
