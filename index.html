@@ -34,7 +34,7 @@
     </script>
     
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Central NJ Urogynecology | Dr. Alexandra Tabakin">
+    <meta property="og:title" content="Urogynecologist in New Brunswick, NJ | Dr. Alexandra Tabakin">
     <meta property="og:description" content="Dr. Alexandra Tabakin is a fellowship-trained urogynecologist in New Brunswick, NJ, treating bladder leakage, prolapse, and pelvic floor conditions in women.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://centralnjurogynecology.com">
@@ -47,7 +47,7 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Central NJ Urogynecology | Dr. Alexandra Tabakin">
+    <meta name="twitter:title" content="Urogynecologist in New Brunswick, NJ | Dr. Alexandra Tabakin">
     <meta name="twitter:description" content="Dr. Alexandra Tabakin is a fellowship-trained urogynecologist in New Brunswick, NJ, treating bladder leakage, prolapse, and pelvic floor conditions in women.">
     <meta name="twitter:image" content="https://centralnjurogynecology.com/images/og-card.jpg">
     <meta name="twitter:image:alt" content="Central NJ Urogynecology, Dr. Alexandra Tabakin, New Brunswick NJ">
@@ -2463,6 +2463,27 @@
                 right: 16px;
                 bottom: 16px;
             }
+    
+</style>
+    <style id="booking-css">
+        /* Inline booking block placed after the first paragraph of each service page */
+        .inline-cta { margin: 28px 0 34px; padding: 22px 24px; background: var(--neutral-light); border: 1px solid #E5E7EB; border-left: 4px solid var(--primary-dark); border-radius: 10px; }
+        .inline-cta p { margin: 0 0 14px; font-size: 1.02rem; line-height: 1.55; color: var(--neutral-dark); }
+        .inline-cta-actions { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
+        .inline-cta-actions .btn { margin: 0; }
+        .inline-cta-phone { font-weight: 700; color: var(--primary-dark); text-decoration: none; font-size: 1.05rem; }
+        .inline-cta-phone:hover { text-decoration: underline; }
+        .footer-facts p { margin-top: 10px; line-height: 1.55; }
+        .footer-facts a { color: var(--primary-light); }
+    
+        /* Quick facts strip under the hero: the four things a referred patient checks first */
+        .quick-facts { background: var(--white); border-top: 1px solid #ECE4F0; border-bottom: 1px solid #ECE4F0; padding: 18px 20px; }
+        .quick-facts-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 28px; }
+        .quick-facts-inner > div { font-size: 0.95rem; line-height: 1.5; color: var(--neutral-dark); }
+        .qf-label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--primary-dark); margin-bottom: 3px; }
+        .quick-facts a { color: var(--primary-dark); font-weight: 600; }
+        @media (max-width: 900px) { .quick-facts-inner { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 560px) { .quick-facts-inner { grid-template-columns: 1fr; gap: 12px; } }
     </style>
     
     <!-- Schema.org Structured Data for SEO -->
@@ -2712,14 +2733,24 @@
                         bladder fistulas, mesh complications, and many more.
                     </p>
                     <div class="hero-buttons">
-                        <button class="btn btn-primary" onclick="window.location.href='appointments.html'">Schedule Appointment</button>
-                        <button class="btn btn-secondary" onclick="window.location.href='about.html'">Meet Dr. Tabakin</button>
+                        <a class="btn btn-primary" href="appointments.html">Request an Appointment</a>
+                        <a class="btn btn-secondary" href="about.html">Meet Dr. Tabakin</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg"
                          alt="Dr. Alexandra Tabakin">
                 </div>
+            </div>
+        </section>
+
+        <!-- Quick facts: what a referred patient checks before calling -->
+        <section class="quick-facts" aria-label="Practice quick facts">
+            <div class="quick-facts-inner">
+                <div><span class="qf-label">New patient visits</span><a href="appointments.html">Request an appointment</a> or call <a href="tel:732-235-7775" onclick="gtag('event', 'phone_click', {'event_category': 'contact', 'event_label': 'Quick Facts Phone'});">732-235-7775</a></div>
+                <div><span class="qf-label">Office</span>Clinical Academic Building, 125 Paterson St, Suite 4100, New Brunswick, NJ 08901</div>
+                <div><span class="qf-label">Hours</span>Monday to Friday, 9:00am to 5:00pm</div>
+                <div><span class="qf-label">Insurance</span>Horizon BCBS, Aetna, Cigna, UnitedHealthcare/Oxford, Medicare, Medicaid and 20+ more. <a href="appointments.html#insurance">See all plans</a></div>
             </div>
         </section>
 
@@ -2744,7 +2775,7 @@
                         mesh complications, urethral diverticulum, and many others. From diagnosis to treatment and aftercare, 
                         her experience and expertise provide the world-class care you deserve.
                     </p>
-                    <button class="btn btn-primary" onclick="window.location.href='about.html'">Learn More About Dr. Tabakin</button>
+                    <a class="btn btn-primary" href="about.html">Learn More About Dr. Tabakin</a>
                 </div>
             </div>
         </section>
@@ -2971,7 +3002,7 @@
                 <h2>Ready to Improve Your Quality of Life?</h2>
                 <p>Schedule a consultation with Dr. Tabakin to discuss your treatment options</p>
                 <div class="cta-buttons">
-                    <button class="btn btn-primary btn-large" onclick="window.location.href='appointments.html'">Schedule an Appointment</button>
+                    <a class="btn btn-primary btn-large" href="appointments.html">Request an Appointment</a>
                     <a href="tel:732-235-7775" class="btn btn-secondary btn-large">Call 732-235-7775</a>
                 </div>
             </div>
@@ -2993,6 +3024,10 @@
                 <p style="margin-top: 20px;">
                     <strong>Phone:</strong> <a href="tel:732-235-7775">732-235-7775</a>
                 </p>
+                <div class="footer-facts">
+                <p><strong>Hours:</strong> Monday to Friday, 9:00am to 5:00pm</p>
+                <p><strong>Insurance:</strong> Horizon BCBS, Aetna, Cigna, UnitedHealthcare/Oxford, Medicare, Medicaid and 20+ more plans. <a href="appointments.html#insurance">See all plans</a></p>
+                </div>
             </div>
             <div class="footer-section">
                 <h3>Quick Links</h3>
