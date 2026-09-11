@@ -475,30 +475,30 @@
         /* Inner Page Hero */
         .inner-hero {
             background: linear-gradient(135deg, #FFFFFF 0%, #FCE4EC 100%);
-            padding: 80px 20px 60px;
-            text-align: center;
+            padding: 34px max(20px, calc((100% - 1160px) / 2)) 30px;
+            text-align: left;
             position: relative;
         }
 
         .back-button {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             color: var(--primary-medium);
             text-decoration: none;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
-            margin-bottom: 20px;
-            padding: 8px 16px;
-            border-radius: 20px;
-            background: var(--white);
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 6px;
+            padding: 0;
+            border-radius: 0;
+            background: transparent;
+            transition: color 0.2s ease;
+            box-shadow: none;
         }
 
         .back-button:hover {
-            background: var(--primary-light);
-            transform: translateX(-3px);
+            color: var(--primary-dark);
+            text-decoration: underline;
         }
 
         .back-button::before {
@@ -508,17 +508,17 @@
 
         .inner-hero h1 {
             font-family: 'Crimson Pro', serif;
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 600;
             color: var(--primary-dark);
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
 
         .inner-hero p {
             font-size: 18px;
             color: var(--neutral-medium);
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0;
         }
 
         /* Content Section */
@@ -1531,11 +1531,6 @@
                 transform: scale(1);
                 opacity: 1;
             }
-        }
-
-        /* Back button slide in */
-        .back-button {
-            animation: slide-in-left 0.5s ease-out;
         }
 
         @keyframes slide-in-left {
@@ -2628,6 +2623,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
                 <li class="dropdown">
                     <button class="mobile-toggle" onclick="toggleMobileDropdown('conditionsDropdown', event)">Conditions</button>
                     <div class="dropdown-content">
@@ -2748,6 +2744,7 @@
                 <ul class="footer-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Dr. Tabakin</a></li>
+                    <li><a href="reviews.html">Patient Reviews</a></li>
                     <li><a href="appointments.html">Appointments</a></li>
                 </ul>
             </div>

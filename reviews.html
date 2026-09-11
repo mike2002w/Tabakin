@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaginal Mesh Complications Specialist in NJ | Dr. Tabakin</title>
+    <title>Patient Reviews | Dr. Alexandra Tabakin, New Brunswick NJ</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Evaluation and surgical correction of transvaginal mesh complications by Dr. Alexandra Tabakin in New Brunswick, NJ.">
+    <meta name="description" content="Read Google reviews from patients of Dr. Alexandra Tabakin, urogynecologist in New Brunswick, NJ. Rated 5.0 stars. Call 732-235-7775 to request an appointment.">
     <meta name="keywords" content="urogynecologist, pelvic floor specialist, urinary incontinence, pelvic organ prolapse, overactive bladder, stress incontinence, New Brunswick NJ, Central New Jersey, Dr. Alexandra Tabakin, Rutgers urogynecology, robotic surgery, vaginal surgery">
     <meta name="author" content="Dr. Alexandra Tabakin">
     <meta name="robots" content="index, follow">
@@ -34,10 +34,10 @@
     </script>
     
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Vaginal Mesh Complications Specialist in NJ | Dr. Tabakin">
-    <meta property="og:description" content="Evaluation and surgical correction of transvaginal mesh complications by Dr. Alexandra Tabakin in New Brunswick, NJ.">
+    <meta property="og:title" content="Patient Reviews | Dr. Alexandra Tabakin, New Brunswick NJ">
+    <meta property="og:description" content="Read Google reviews from patients of Dr. Alexandra Tabakin, urogynecologist in New Brunswick, NJ. Rated 5.0 stars. Call 732-235-7775 to request an appointment.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://centralnjurogynecology.com/mesh-complications.html">
+    <meta property="og:url" content="https://centralnjurogynecology.com/reviews.html">
     <meta property="og:image" content="https://centralnjurogynecology.com/images/og-card.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -47,13 +47,13 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vaginal Mesh Complications Specialist in NJ | Dr. Tabakin">
-    <meta name="twitter:description" content="Evaluation and surgical correction of transvaginal mesh complications by Dr. Alexandra Tabakin in New Brunswick, NJ.">
+    <meta name="twitter:title" content="Patient Reviews | Dr. Alexandra Tabakin, New Brunswick NJ">
+    <meta name="twitter:description" content="Read Google reviews from patients of Dr. Alexandra Tabakin, urogynecologist in New Brunswick, NJ. Rated 5.0 stars. Call 732-235-7775 to request an appointment.">
     <meta name="twitter:image" content="https://centralnjurogynecology.com/images/og-card.jpg">
     <meta name="twitter:image:alt" content="Central NJ Urogynecology, Dr. Alexandra Tabakin, New Brunswick NJ">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://centralnjurogynecology.com/mesh-complications.html">
+    <link rel="canonical" href="https://centralnjurogynecology.com/reviews.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1533,6 +1533,7 @@
             }
         }
 
+
         @keyframes slide-in-left {
             from {
                 transform: translateX(-20px);
@@ -2373,8 +2374,99 @@
         @media (max-width: 768px) {
             .sticky-call-cta { display: inline-flex; }
         }
+
+        /* Lite-vimeo — lazy-loaded Vimeo poster pattern */
+        .lite-vimeo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            background: var(--primary-dark);
+            padding: 0;
+            font-family: inherit;
+        }
+        .lite-vimeo img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            filter: brightness(0.85);
+        }
+        .lite-vimeo::after {
+            /* purple gradient overlay for text legibility */
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(106, 27, 154, 0) 40%, rgba(106, 27, 154, 0.75) 100%);
+        }
+        .lite-vimeo-title {
+            position: absolute;
+            left: 24px;
+            right: 24px;
+            bottom: 24px;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+            text-align: left;
+            z-index: 2;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+        .lite-vimeo-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(142, 36, 170, 0.95);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s ease, background 0.25s ease;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .lite-vimeo-play svg {
+            margin-left: 4px;
+        }
+        .lite-vimeo:hover .lite-vimeo-play {
+            transform: translate(-50%, -50%) scale(1.08);
+            background: var(--primary-medium);
+        }
+        .lite-vimeo:focus-visible {
+            outline: 3px solid var(--primary-medium);
+            outline-offset: 4px;
+        }
+        @media (max-width: 640px) {
+            .lite-vimeo-play {
+                width: 64px;
+                height: 64px;
+            }
+            .lite-vimeo-title {
+                font-size: 16px;
+                left: 16px;
+                right: 16px;
+                bottom: 16px;
+            }
+        }
+
     
-</style>
+        @media (max-width: 640px) {
+            .rating-block { text-align: left !important; }
+            .rating-block > div { justify-content: flex-start !important; }
+        }
+    </style>
     <style id="booking-css">
         /* Inline booking block placed after the first paragraph of each service page */
         .inline-cta { margin: 28px 0 34px; padding: 22px 24px; background: var(--neutral-light); border: 1px solid #E5E7EB; border-left: 4px solid var(--primary-dark); border-radius: 10px; }
@@ -2393,170 +2485,10 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalClinic",
-          "@id": "https://centralnjurogynecology.com/#clinic",
-          "areaServed": [
-            {"@type": "City", "name": "New Brunswick"},
-            {"@type": "City", "name": "East Brunswick"},
-            {"@type": "City", "name": "North Brunswick"},
-            {"@type": "City", "name": "Edison"},
-            {"@type": "City", "name": "Piscataway"},
-            {"@type": "City", "name": "Highland Park"},
-            {"@type": "City", "name": "Metuchen"},
-            {"@type": "City", "name": "Milltown"},
-            {"@type": "City", "name": "Somerset"},
-            {"@type": "City", "name": "Old Bridge"},
-            {"@type": "AdministrativeArea", "name": "Middlesex County"},
-            {"@type": "AdministrativeArea", "name": "Somerset County"},
-            {"@type": "AdministrativeArea", "name": "Mercer County"}
-          ],
-          
-          "name": "Central NJ Urogynecology",
-          "image": "https://centralnjurogynecology.com/images/tabakin-headshot.jpg",
-          "url": "https://centralnjurogynecology.com",
-          "telephone": "+17322357775",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "125 Paterson Street, Suite 4100",
-            "addressLocality": "New Brunswick",
-            "addressRegion": "NJ",
-            "postalCode": "08901",
-            "addressCountry": "US"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 40.4862,
-            "longitude": -74.4518
-          },
-          "hasMap": "https://www.google.com/maps/search/?api=1&query=125+Paterson+Street+Suite+4100+New+Brunswick+NJ+08901",
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "09:00",
-            "closes": "17:00"
-          },
-          "acceptedInsurance": [
-            "Aetna",
-            "Aetna Better Health",
-            "Aetna Medicare",
-            "Centivo",
-            "CHN (Consumer Health Network)",
-            "Cigna",
-            "Cigna HealthSpring",
-            "Cigna Medicare",
-            "Clover Health",
-            "DOL (Department of Labor)",
-            "EmblemHealth",
-            "Fidelis (WellCare)",
-            "Horizon Blue Cross Blue Shield",
-            "Horizon Casualty",
-            "Horizon NJ Health",
-            "Humana Medicare",
-            "Humana Tricare",
-            "Longevity Health Plan",
-            "MagnaCare",
-            "Medicaid",
-            "Medicare",
-            "Multiplan",
-            "Northwell Health",
-            "QualCare",
-            "UnitedHealthcare / Oxford",
-            "UnitedHealthcare Community Plan",
-            "US Family Health Plan",
-            "WellPoint (Amerigroup)"
-          ],
-          "priceRange": "$$",
-          "medicalSpecialty": "Urogynecology",
-          "parentOrganization": {
-            "@type": "MedicalOrganization",
-            "name": "Rutgers Robert Wood Johnson Medical School",
-            "url": "https://rwjms.rutgers.edu/"
-          },
-          "physician": {"@id": "https://centralnjurogynecology.com/#physician"},
-          "potentialAction": {
-            "@type": "ReserveAction",
-            "target": "https://centralnjurogynecology.com/appointments.html",
-            "name": "Request an appointment"
-          }
-        },
-        {
-          "@type": "Physician",
-          "@id": "https://centralnjurogynecology.com/#physician",
-          "name": "Dr. Alexandra Tabakin",
-          "givenName": "Alexandra",
-          "familyName": "Tabakin",
-          "honorificSuffix": "MD",
-          "image": "https://centralnjurogynecology.com/images/tabakin-headshot.jpg",
-          "medicalSpecialty": ["Urogynecology", "Urology", "Female Pelvic Medicine and Reconstructive Surgery"],
-          "worksFor": {"@id": "https://centralnjurogynecology.com/#clinic"},
-          "workLocation": {"@id": "https://centralnjurogynecology.com/#clinic"},
-          "jobTitle": "Assistant Professor of Surgery, Division of Urology",
-          "affiliation": {
-            "@type": "MedicalOrganization",
-            "name": "Rutgers Robert Wood Johnson Medical School",
-            "url": "https://rwjms.rutgers.edu/"
-          },
-          "alumniOf": [
-            {"@type": "EducationalOrganization", "name": "Rutgers Robert Wood Johnson Medical School"},
-            {"@type": "EducationalOrganization", "name": "Thomas Jefferson University Hospital"},
-            {"@type": "EducationalOrganization", "name": "NewYork-Presbyterian / Weill Cornell Medical Center"},
-            {"@type": "EducationalOrganization", "name": "NYU Langone Health"}
-          ],
-          "knowsAbout": [
-            "Pelvic Organ Prolapse",
-            "Urinary Incontinence",
-            "Stress Urinary Incontinence",
-            "Overactive Bladder",
-            "Pelvic Floor Disorders",
-            "Vaginal Fistula",
-            "Urethral Diverticulum",
-            "Maternal Pelvic Floor Trauma",
-            "Genitourinary Syndrome of Menopause",
-            "Robotic Pelvic Surgery",
-            "Vaginal Surgery",
-            "Midurethral Sling",
-            "Urethral Bulking",
-            "Sacral Neuromodulation",
-            "Bladder Botox",
-            "Tibial Nerve Stimulation",
-            "Female Pelvic Medicine and Reconstructive Surgery"
-          ],
-          "url": "https://centralnjurogynecology.com",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "125 Paterson Street, Suite 4100",
-            "addressLocality": "New Brunswick",
-            "addressRegion": "NJ",
-            "postalCode": "08901",
-            "addressCountry": "US"
-          },
-          "telephone": "+17322357775"
-        }
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "MedicalCondition",
-          "name": "Mesh Complications",
-          "description": "Evaluation and surgical correction of transvaginal mesh complications by Dr. Alexandra Tabakin in New Brunswick, NJ.",
-          "url": "https://centralnjurogynecology.com/mesh-complications.html",
-          "associatedAnatomy": "Pelvic floor",
-      "relevantSpecialty": {
-            "@type": "MedicalSpecialty",
-            "name": "Urogynecology"
-          },
-          "recognizingAuthority": {"@id": "https://centralnjurogynecology.com/#physician"}
-        },
-        {
           "@type": "BreadcrumbList",
           "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://centralnjurogynecology.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Conditions", "item": "https://centralnjurogynecology.com/#conditions"},
-            {"@type": "ListItem", "position": 3, "name": "Mesh Complications", "item": "https://centralnjurogynecology.com/mesh-complications.html"}
+            {"@type": "ListItem", "position": 2, "name": "Patient Reviews", "item": "https://centralnjurogynecology.com/reviews.html"}
           ]
         }
       ]
@@ -2644,42 +2576,89 @@
     </nav>
 
     <main>
-    <!-- mesh-complications content (extracted from the original single-page site) -->
-    <div class="page-content active" id="mesh-complications">
-
-        <div class="inner-hero">
-            <h1>Mesh Complications</h1>
-        </div>
-        <section class="content-section">
-            <h2>What are mesh complications?</h2>
-            <p>Surgical mesh is sometimes used in pelvic floor surgery to provide support for prolapse or incontinence treatment. While mesh can be effective, some patients may experience complications including pain, mesh erosion, infection, or mesh contraction.</p>
-            
-            <div class="inline-cta">
-                <p><strong>Talk to a specialist.</strong> Dr. Tabakin sees new patients at her New Brunswick office, in the Clinical Academic Building at Rutgers Robert Wood Johnson Medical School.</p>
-                <div class="inline-cta-actions">
-                    <a class="btn btn-primary" href="appointments.html">Request an Appointment</a>
-                    <a class="inline-cta-phone" href="tel:732-235-7775" onclick="gtag('event', 'phone_click', {'event_category': 'contact', 'event_label': 'Inline CTA mesh-complications'});">Call 732-235-7775</a>
+    <div class="page-content active" id="reviews">
+        <div class="inner-hero about-hero">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+                <div>
+                    <a href="index.html" class="back-button">Back to Home</a>
+                    <h1 style="margin: 6px 0 0;">Patient Reviews</h1>
+                </div>
+                <div class="rating-block" style="text-align: right;">
+                    <div style="display:flex; align-items:center; justify-content:flex-end; gap: 10px;">
+                        <span style="font-family: 'Crimson Pro', serif; font-size: 40px; font-weight: 600; color: var(--primary-dark); line-height: 1;">5.0</span>
+                        <div style="display:flex; gap:3px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+                    </div>
+                    <p style="margin: 6px 0 0; font-size: 15px;">Based on patient reviews on Google</p>
                 </div>
             </div>
-            <h3>Symptoms of Mesh Complications</h3>
-            <ul>
-                <li>Chronic pelvic pain</li>
-                <li>Pain during intercourse</li>
-                <li>Vaginal discharge or bleeding</li>
-                <li>Urinary problems</li>
-                <li>Mesh erosion or exposure</li>
-                <li>Recurrent infections</li>
-            </ul>
+        </div>
 
-            <h3>Treatment Options</h3>
-            <p>Dr. Tabakin specializes in the evaluation and treatment of mesh complications. Treatment options may include conservative management, mesh removal (partial or complete), or reconstructive surgery. Each case is evaluated individually to determine the best approach.</p>
-            
-            <p style="margin: 30px 0 18px; font-size: 16px;"><strong>Related pages:</strong> <a href="vaginal-surgery.html" style="color: var(--primary-medium);">Vaginal Surgery</a> &middot; <a href="robotic-surgery.html" style="color: var(--primary-medium);">Robotic Surgery</a></p>
-                    <a class="btn btn-primary" href="appointments.html">Schedule a Consultation</a>
+        <section class="content-section" style="padding-top: 36px; padding-bottom: 20px;">
+            <div style="max-width: 1100px; margin: 0 auto;">
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px;">
+                <div style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 12px; padding: 28px 28px 22px; display:flex; flex-direction:column;">
+                    <div style="display:flex; gap:2px; margin-bottom:12px;" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+                    <p style="font-size: 17px; line-height: 1.7; margin: 0 0 18px; flex:1;">&ldquo;I had a wonderful experience with Dr. Alexandra Tabakin. Visiting a urologist can often feel daunting, but Dr. Tabakin immediately put me at ease. She was exceptionally pleasant, warm, and attentive. She truly took the time to listen to all of my concerns, explained everything clearly, and answered each of my questions without rushing. I left my appointment feeling completely reassured and far more comfortable. I highly recommend Dr. Tabakin to anyone seeking a skilled, compassionate doctor.&rdquo;</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <div><strong style="color: var(--primary-dark);">Ruth B.</strong><span style="color: var(--neutral-medium); font-size: 14px;"> &middot; September 2026</span></div>
+                        <a href="https://www.google.com/search?q=alexandra+tabakin+md+urogynecology+new+brunswick+reviews#lrd=0x89c3c74a3d89f867:0x592a2a6cb8aaa890,1" target="_blank" rel="noopener" style="font-size: 12px; color: var(--primary-medium); text-decoration:none; border:1px solid #E1BEE7; border-radius: 20px; padding: 4px 10px;">via Google</a>
+                    </div>
+                </div>
+                <div style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 12px; padding: 28px 28px 22px; display:flex; flex-direction:column;">
+                    <div style="display:flex; gap:2px; margin-bottom:12px;" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+                    <p style="font-size: 17px; line-height: 1.7; margin: 0 0 18px; flex:1;">&ldquo;Dr. Tabakin is fantastic. She immediately puts you at ease with her warm demeanor, thorough explanations, and genuine attentiveness. You truly feel heard and cared for from start to finish. Highly recommend her to anyone looking for an exceptional specialist!&rdquo;</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <div><strong style="color: var(--primary-dark);">Jessica T.</strong><span style="color: var(--neutral-medium); font-size: 14px;"> &middot; September 2026</span></div>
+                        <a href="https://www.google.com/search?q=alexandra+tabakin+md+urogynecology+new+brunswick+reviews#lrd=0x89c3c74a3d89f867:0x592a2a6cb8aaa890,1" target="_blank" rel="noopener" style="font-size: 12px; color: var(--primary-medium); text-decoration:none; border:1px solid #E1BEE7; border-radius: 20px; padding: 4px 10px;">via Google</a>
+                    </div>
+                </div>
+                <div style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 12px; padding: 28px 28px 22px; display:flex; flex-direction:column;">
+                    <div style="display:flex; gap:2px; margin-bottom:12px;" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+                    <p style="font-size: 17px; line-height: 1.7; margin: 0 0 18px; flex:1;">&ldquo;Dr. Tabakin has always made me feel extremely comfortable, heard, and cared for. She asks questions without judgement, and has almost always identified any issues quickly for both my family members and myself. I really recommend someone as warm, smart, and thoughtful as her as your doctor. We all deserve healthcare like this, especially around such sensitive topics.&rdquo;</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <div><strong style="color: var(--primary-dark);">Henah V.</strong><span style="color: var(--neutral-medium); font-size: 14px;"> &middot; January 2026</span></div>
+                        <a href="https://www.google.com/search?q=alexandra+tabakin+md+urogynecology+new+brunswick+reviews#lrd=0x89c3c74a3d89f867:0x592a2a6cb8aaa890,1" target="_blank" rel="noopener" style="font-size: 12px; color: var(--primary-medium); text-decoration:none; border:1px solid #E1BEE7; border-radius: 20px; padding: 4px 10px;">via Google</a>
+                    </div>
+                </div>
+                
+                <div style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 12px; padding: 28px 28px 22px; display:flex; flex-direction:column;">
+                    <div style="display:flex; gap:2px; margin-bottom:12px;" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+                    <p style="font-size: 17px; line-height: 1.7; margin: 0 0 18px; flex:1;">&ldquo;Dr. Tabakin is an amazing urologist, gentle and compassionate doctor. She took my emergency case swiftly and opened up her schedule for my much needed surgery.&rdquo;</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <div><strong style="color: var(--primary-dark);">Jenny H.</strong><span style="color: var(--neutral-medium); font-size: 14px;"> &middot; September 2026</span></div>
+                        <a href="https://www.google.com/search?q=alexandra+tabakin+md+urogynecology+new+brunswick+reviews#lrd=0x89c3c74a3d89f867:0x592a2a6cb8aaa890,1" target="_blank" rel="noopener" style="font-size: 12px; color: var(--primary-medium); text-decoration:none; border:1px solid #E1BEE7; border-radius: 20px; padding: 4px 10px;">via Google</a>
+                    </div>
+                </div>
+                <div style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 12px; padding: 28px 28px 22px; display:flex; flex-direction:column;">
+                    <div style="display:flex; gap:2px; margin-bottom:12px;" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+                    <p style="font-size: 17px; line-height: 1.7; margin: 0 0 18px; flex:1;">&ldquo;Dr. Tabakin is excellent&hellip; she treated me with great respect&hellip; I haven't felt any discomfort or pain after my treatment. I am very happy with Dr. Tabakin and her entire team. Congratulations and endless thanks for everything you do with your minds and hands. I am infinitely grateful for everything. I highly recommend Dr. Tabakin, her team, and this hospital.&rdquo;</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <div><strong style="color: var(--primary-dark);">Carlos M.</strong><span style="color: var(--neutral-medium); font-size: 14px;"> &middot; September 2026</span><span style="font-size:12px; color: var(--neutral-medium);"> &middot; Translated from Spanish</span></div>
+                        <a href="https://www.google.com/search?q=alexandra+tabakin+md+urogynecology+new+brunswick+reviews#lrd=0x89c3c74a3d89f867:0x592a2a6cb8aaa890,1" target="_blank" rel="noopener" style="font-size: 12px; color: var(--primary-medium); text-decoration:none; border:1px solid #E1BEE7; border-radius: 20px; padding: 4px 10px;">via Google</a>
+                    </div>
+                </div>
+                <div style="background: var(--white); border: 1px solid #E5E7EB; border-radius: 12px; padding: 28px 28px 22px; display:flex; flex-direction:column;">
+                    <div style="display:flex; gap:2px; margin-bottom:12px;" aria-label="5 out of 5 stars"><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg><svg width="18" height="18" viewBox="0 0 24 24" fill="#9C27B0" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg></div>
+                    <p style="font-size: 17px; line-height: 1.7; margin: 0 0 18px; flex:1;">&ldquo;Definitely deserves 5 stars!&rdquo;</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap;">
+                        <div><strong style="color: var(--primary-dark);">Joseph W.</strong><span style="color: var(--neutral-medium); font-size: 14px;"> &middot; August 2026</span></div>
+                        <a href="https://www.google.com/search?q=alexandra+tabakin+md+urogynecology+new+brunswick+reviews#lrd=0x89c3c74a3d89f867:0x592a2a6cb8aaa890,1" target="_blank" rel="noopener" style="font-size: 12px; color: var(--primary-medium); text-decoration:none; border:1px solid #E1BEE7; border-radius: 20px; padding: 4px 10px;">via Google</a>
+                    </div>
+                </div>
+                </div>
+            </div>
         </section>
-    
+
+        <section class="content-section" style="padding-top: 10px;">
+            <p style="max-width: 760px; margin: 0 auto 40px; text-align:center; font-size: 14px; color: var(--neutral-medium); line-height:1.6;">
+                Reviews appear as written on Google, shortened only where marked with an ellipsis. Names are shown as first name and last initial. Reviews reflect individual experiences and are not a guarantee of results.<br>Been a patient? <a href="https://www.google.com/search?q=alexandra+tabakin+md+urogynecology+new+brunswick+reviews#lrd=0x89c3c74a3d89f867:0x592a2a6cb8aaa890,3" target="_blank" rel="noopener" style="color: var(--primary-medium);">Share your experience on Google</a>.
+            </p>
+            <div style="text-align:center;">
+                <a href="appointments.html" class="btn btn-primary">Request an Appointment</a>
+            </div>
+        </section>
     </div>
-    </main>
+</main>
 <!-- Footer -->
     <footer>
         <div class="footer-content">
@@ -2736,6 +2715,28 @@
             if (selectedPage) {
                 selectedPage.classList.add('active');
                 window.scrollTo(0, 0);
+            }
+        }
+
+
+        // Lite-vimeo: on first click, replace the placeholder with the real
+        // Vimeo iframe (autoplay=1). Keeps condition pages fast until the
+        // patient explicitly decides to watch.
+        function playLiteVimeo(el, videoId) {
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://player.vimeo.com/video/' + videoId +
+                         '?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1';
+            iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share');
+            iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('title', el.getAttribute('data-title') || 'Video');
+            iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:12px;';
+            el.replaceWith(iframe);
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'video_play', {
+                    event_category: 'engagement',
+                    event_label: videoId
+                });
             }
         }
 
