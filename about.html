@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#6A1B9A">
     <title>Dr. Alexandra Tabakin, Urogynecologist | New Brunswick, NJ</title>
     
     <!-- SEO Meta Tags -->
@@ -57,7 +62,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="site.css">
     <style id="booking-css">
         /* Inline booking block placed after the first paragraph of each service page */
@@ -318,10 +323,10 @@
         <section class="content-section" style="padding-top: 60px;">
             <div class="video-section">
                 <div class="video-label">Get to Know Dr. Tabakin</div>
-                <h3 class="video-title">A Personal Introduction</h3>
+                <h2 class="video-title">A Personal Introduction</h2>
                 <div class="video-container">
                     <div style="padding:56.25% 0 0 0;position:relative;">
-                        <button type="button" class="lite-vimeo" data-title="Meet Dr. Alexandra Tabakin" onclick="playLiteVimeo(this, '1158218957')" aria-label="Play video: Meet Dr. Alexandra Tabakin"><img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg" alt="" loading="lazy"><span class="lite-vimeo-play" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="lite-vimeo-title">Meet Dr. Alexandra Tabakin</span></button>
+                        <button type="button" class="lite-vimeo" data-title="Meet Dr. Alexandra Tabakin" onclick="playLiteVimeo(this, '1158218957')" aria-label="Play video: Meet Dr. Alexandra Tabakin"><img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg" alt="Dr. Alexandra Tabakin, urogynecologist in New Brunswick, NJ" loading="lazy"><span class="lite-vimeo-play" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="lite-vimeo-title">Meet Dr. Alexandra Tabakin</span></button>
                     </div>
                 </div>
             </div>
@@ -378,61 +383,61 @@
                 <div class="awards-grid">
                     <div class="award-card">
                         <div class="award-year">2025</div>
-                        <h4>Best Overall Conference Video</h4>
+                        <h3>Best Overall Conference Video</h3>
                         <p>Society of Urodynamics Female Pelvic Medicine & Urogenital Reconstruction</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2022</div>
-                        <h4>Urology Leadership and Service Award</h4>
+                        <h3>Urology Leadership and Service Award</h3>
                         <p>Rutgers Robert Wood Johnson Medical School</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2022</div>
-                        <h4>Overall Champion, Chief Debate</h4>
+                        <h3>Overall Champion, Chief Debate</h3>
                         <p>American Urological Association New York Section</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2018</div>
-                        <h4>Humanism and Excellence in Teaching Award</h4>
+                        <h3>Humanism and Excellence in Teaching Award</h3>
                         <p>Rutgers Robert Wood Johnson Medical School</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2017</div>
-                        <h4>Glasgow-Rubin Citation for Academic Achievement</h4>
+                        <h3>Glasgow-Rubin Citation for Academic Achievement</h3>
                         <p>Rutgers University</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2016</div>
-                        <h4>Alpha Omega Alpha Honor Medical Society</h4>
+                        <h3>Alpha Omega Alpha Honor Medical Society</h3>
                         <p>National Medical Honor Society</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2016</div>
-                        <h4>Gold Humanism Honor Society</h4>
+                        <h3>Gold Humanism Honor Society</h3>
                         <p>Recognizing compassionate patient care</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2013</div>
-                        <h4>Henry Rutgers Scholar Award</h4>
+                        <h3>Henry Rutgers Scholar Award</h3>
                         <p>Rutgers University highest academic honor</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2013</div>
-                        <h4>MacMillan Award for Research Excellence</h4>
+                        <h3>MacMillan Award for Research Excellence</h3>
                         <p>The Duncan and Nancy MacMillan Award</p>
                     </div>
 
                     <div class="award-card">
                         <div class="award-year">2012</div>
-                        <h4>Phi Beta Kappa</h4>
+                        <h3>Phi Beta Kappa</h3>
                         <p>National Honor Society</p>
                     </div>
                 </div>
@@ -475,10 +480,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 by Dr. Alexandra Tabakin, MD. All rights reserved.</p>
+            <p>© <span id="footerYear">2026</span> by Dr. Alexandra Tabakin, MD. All rights reserved.</p>
+            <script>document.getElementById("footerYear").textContent = new Date().getFullYear();</script>
         </div>
     </footer>
-<!-- Sticky mobile Call CTA — always-reachable tap-to-call button -->
+<!-- Sticky mobile Call CTA: always-reachable tap-to-call button -->
     <a href="tel:+17322357775"
        class="sticky-call-cta"
        aria-label="Call Central NJ Urogynecology at 732-235-7775"
@@ -642,7 +648,7 @@
             }
         });
 
-        // (standalone page — no client-side SPA routing)
+        // (standalone page, no client-side SPA routing)
     </script>
 </body>
 </html>

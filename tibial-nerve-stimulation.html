@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#6A1B9A">
     <title>Tibial Nerve Stimulation (PTNS), New Brunswick NJ | Dr. Tabakin</title>
     
     <!-- SEO Meta Tags -->
@@ -57,7 +62,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="site.css">
     <style id="booking-css">
         /* Inline booking block placed after the first paragraph of each service page */
@@ -226,7 +231,7 @@
         {
           "@type": "MedicalProcedure",
           "name": "Posterior Tibial Nerve Stimulation",
-          "description": "Percutaneous tibial nerve stimulation (PTNS) for overactive bladder — in-office, needle-free-option — with Dr. Alexandra Tabakin.",
+          "description": "Percutaneous tibial nerve stimulation (PTNS) for overactive bladder, an in-office treatment, with Dr. Alexandra Tabakin in New Brunswick, NJ.",
           "url": "https://centralnjurogynecology.com/tibial-nerve-stimulation.html",
           "procedureType": "Surgical",
       "relevantSpecialty": {
@@ -445,10 +450,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 by Dr. Alexandra Tabakin, MD. All rights reserved.</p>
+            <p>© <span id="footerYear">2026</span> by Dr. Alexandra Tabakin, MD. All rights reserved.</p>
+            <script>document.getElementById("footerYear").textContent = new Date().getFullYear();</script>
         </div>
     </footer>
-<!-- Sticky mobile Call CTA — always-reachable tap-to-call button -->
+<!-- Sticky mobile Call CTA: always-reachable tap-to-call button -->
     <a href="tel:+17322357775"
        class="sticky-call-cta"
        aria-label="Call Central NJ Urogynecology at 732-235-7775"
@@ -590,7 +596,7 @@
             }
         });
 
-        // (standalone page — no client-side SPA routing)
+        // (standalone page, no client-side SPA routing)
     </script>
 </body>
 </html>

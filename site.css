@@ -1669,7 +1669,7 @@ section {
     margin-bottom: 12px;
 }
 
-.award-card h4 {
+.award-card h3 {
     font-family: 'Crimson Pro', serif;
     font-size: 18px;
     font-weight: 600;
@@ -2268,7 +2268,7 @@ footer {
     }
 }
 
-/* Sticky mobile "Call Now" CTA — always-reachable tap-to-call button */
+/* Sticky mobile "Call Now" CTA: always-reachable tap-to-call button */
 .sticky-call-cta {
     display: none; /* hidden on desktop */
     position: fixed;
@@ -2314,7 +2314,7 @@ footer {
     .sticky-call-cta { display: inline-flex; }
 }
 
-/* Lite-vimeo — lazy-loaded Vimeo poster pattern */
+/* Lite-vimeo: lazy-loaded Vimeo poster pattern */
 .lite-vimeo {
     position: absolute;
     top: 0;

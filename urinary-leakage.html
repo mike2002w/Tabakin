@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#6A1B9A">
     <title>Urinary Leakage Treatment, New Brunswick NJ | Dr. Tabakin</title>
     
     <!-- SEO Meta Tags -->
@@ -57,7 +62,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="site.css">
     <style id="booking-css">
         /* Inline booking block placed after the first paragraph of each service page */
@@ -272,7 +277,7 @@
           "name": "What are the types of urinary incontinence?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Stress urinary incontinence: occurs most commonly when there is a weakness in urethral support or in the urinary sphincter. As a result, certain activities—such as sneezing, coughing, laughing, bending or exercising—places pressure on the bladder and causes urine to leak involuntarily, Urge urinary incontinence (also known as overactive bladder): the sudden urge to urinate, often with little or no warning. Your bladder muscles may be too active and squeeze to pass urine before you can get to the bathroom, Mixed incontinence: a combination of having stress urinary incontinence and urge urinary incontinence, Overflow incontinence: when you are unable to empty your bladder and the urine overflows or leaks out. Symptoms include frequent urination of small amounts or a constant drip."
+            "text": "Stress urinary incontinence: occurs most commonly when there is a weakness in urethral support or in the urinary sphincter. As a result, certain activities, such as sneezing, coughing, laughing, bending or exercising, place pressure on the bladder and causes urine to leak involuntarily, Urge urinary incontinence (also known as overactive bladder): the sudden urge to urinate, often with little or no warning. Your bladder muscles may be too active and squeeze to pass urine before you can get to the bathroom, Mixed incontinence: a combination of having stress urinary incontinence and urge urinary incontinence, Overflow incontinence: when you are unable to empty your bladder and the urine overflows or leaks out. Symptoms include frequent urination of small amounts or a constant drip."
           }
         },
         {
@@ -391,7 +396,7 @@
             <div class="video-section" style="margin-bottom: 40px;">
                 <div class="video-container">
                     <div style="padding:56.25% 0 0 0;position:relative;">
-                        <button type="button" class="lite-vimeo" data-title="Understanding urinary incontinence" onclick="playLiteVimeo(this, '1158238522')" aria-label="Play video: Understanding urinary incontinence"><img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg" alt="" loading="lazy"><span class="lite-vimeo-play" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="lite-vimeo-title">Understanding urinary incontinence</span></button>
+                        <button type="button" class="lite-vimeo" data-title="Understanding urinary incontinence" onclick="playLiteVimeo(this, '1158238522')" aria-label="Play video: Understanding urinary incontinence"><img src="https://centralnjurogynecology.com/images/tabakin-headshot.jpg" alt="Dr. Alexandra Tabakin, urogynecologist in New Brunswick, NJ" loading="lazy"><span class="lite-vimeo-play" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span><span class="lite-vimeo-title">Understanding urinary incontinence</span></button>
                     </div>
                 </div>
             </div>
@@ -420,7 +425,7 @@
             
             <h2>What are the types of urinary incontinence?</h2>
             <ul>
-                <li><strong>Stress urinary incontinence:</strong> occurs most commonly when there is a weakness in urethral support or in the urinary sphincter. As a result, certain activities—such as sneezing, coughing, laughing, bending or exercising—places pressure on the bladder and causes urine to leak involuntarily.</li>
+                <li><strong>Stress urinary incontinence:</strong> occurs most commonly when there is a weakness in urethral support or in the urinary sphincter. As a result, certain activities, such as sneezing, coughing, laughing, bending or exercising, place pressure on the bladder and causes urine to leak involuntarily.</li>
                 <li><strong>Urge urinary incontinence (also known as overactive bladder):</strong> the sudden urge to urinate, often with little or no warning. Your bladder muscles may be too active and squeeze to pass urine before you can get to the bathroom.</li>
                 <li><strong>Mixed incontinence:</strong> a combination of having stress urinary incontinence and urge urinary incontinence.</li>
                 <li><strong>Overflow incontinence:</strong> when you are unable to empty your bladder and the urine overflows or leaks out. Symptoms include frequent urination of small amounts or a constant drip.</li>
@@ -472,10 +477,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 by Dr. Alexandra Tabakin, MD. All rights reserved.</p>
+            <p>© <span id="footerYear">2026</span> by Dr. Alexandra Tabakin, MD. All rights reserved.</p>
+            <script>document.getElementById("footerYear").textContent = new Date().getFullYear();</script>
         </div>
     </footer>
-<!-- Sticky mobile Call CTA — always-reachable tap-to-call button -->
+<!-- Sticky mobile Call CTA: always-reachable tap-to-call button -->
     <a href="tel:+17322357775"
        class="sticky-call-cta"
        aria-label="Call Central NJ Urogynecology at 732-235-7775"
@@ -639,7 +645,7 @@
             }
         });
 
-        // (standalone page — no client-side SPA routing)
+        // (standalone page, no client-side SPA routing)
     </script>
 </body>
 </html>
