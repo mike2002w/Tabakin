@@ -60,8 +60,10 @@ Index: https://centralnjurogynecology.com/treatments.html
 - Patient reviews (from Google): https://centralnjurogynecology.com/reviews.html
 - All conditions: https://centralnjurogynecology.com/conditions.html
 - All treatments: https://centralnjurogynecology.com/treatments.html
-- Appointments, insurance, directions, common questions:
-  https://centralnjurogynecology.com/appointments.html
+- Appointments and directions: https://centralnjurogynecology.com/appointments.html
+- Insurance plans accepted: https://centralnjurogynecology.com/insurance.html
+- Common questions (all FAQs in one place): https://centralnjurogynecology.com/faq.html
+- Research and publications (PubMed-indexed): https://centralnjurogynecology.com/publications.html
 - Urinary leakage: https://centralnjurogynecology.com/urinary-leakage.html
 - Pelvic organ prolapse: https://centralnjurogynecology.com/pelvic-organ-prolapse.html
 - Overactive bladder: https://centralnjurogynecology.com/overactive-bladder.html
