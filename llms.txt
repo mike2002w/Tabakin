@@ -2,17 +2,40 @@
 
 > Fellowship-trained urogynecologist in New Brunswick, New Jersey, treating
 > bladder leakage, pelvic organ prolapse, and pelvic floor conditions in women.
-> Also sees men with BPH and voiding dysfunction.
+> Also sees men with BPH and voiding dysfunction. Full page text for
+> assistants: https://centralnjurogynecology.com/llms-full.txt
 
 ## Who
 
-- Alexandra Tabakin, MD, urologist and fellowship-trained urogynecologist
+- Alexandra Tabakin, MD (also written Alexandra L. Tabakin or Alexandra
+  Lauren Tabakin), urologist and fellowship-trained urogynecologist
 - Assistant Professor of Surgery, Division of Urology, Rutgers Robert Wood
   Johnson Medical School
 - Residency in Urology: Rutgers Robert Wood Johnson Medical School
 - Fellowship in Urogynecology and Reconstructive Pelvic Surgery: Northwell
   Health (North Shore University Hospital / LIJ)
-- Over 80 peer-reviewed publications and abstracts
+- NPI 1982132684; ORCID 0000-0003-4046-2966; over 50 PubMed-indexed papers
+- Hospital affiliation: Robert Wood Johnson University Hospital, New Brunswick
+
+## Key facts
+
+- Office: Clinical Academic Building at Rutgers Robert Wood Johnson Medical
+  School, 125 Paterson Street, Suite 4100, New Brunswick, NJ 08901
+- Phone (appointments): 732-235-7775
+- Hours: Monday to Friday, 9:00am to 5:00pm
+- Parking: public parking near the building; minutes from Route 18 and Exit 9
+  of the New Jersey Turnpike
+- Insurance: most major plans accepted, including Horizon BCBS, Aetna, Cigna,
+  UnitedHealthcare/Oxford, Medicare and Medicaid; full list at
+  https://centralnjurogynecology.com/appointments.html#insurance
+- Appointment requests: online form at
+  https://centralnjurogynecology.com/appointments.html or by phone
+- Serves patients across Central New Jersey, including New Brunswick, East
+  Brunswick, North Brunswick, Edison, Piscataway, Highland Park, Metuchen,
+  Milltown, Somerset, and Old Bridge, and Middlesex, Somerset, and Mercer
+  counties
+- Patient reviews: 5.0 stars on Google; verbatim reviews at
+  https://centralnjurogynecology.com/reviews.html
 
 ## Conditions treated
 
@@ -20,6 +43,7 @@ Urinary leakage and incontinence (stress and urge), overactive bladder,
 pelvic organ prolapse, recurrent urinary tract infections, urinary retention,
 vaginal fistula, urethral diverticulum, mesh complications, maternal pelvic
 floor trauma, genitourinary syndrome of menopause, BPH.
+Index: https://centralnjurogynecology.com/conditions.html
 
 ## Treatments offered
 
@@ -27,20 +51,7 @@ Pelvic floor physical therapy referral, pessary fitting, bladder Botox,
 sacral neuromodulation, posterior tibial nerve stimulation, midurethral
 sling, urethral bulking, robotic and vaginal prolapse surgery, mesh removal
 and revision surgery.
-
-## Location and contact
-
-- Office: Clinical Academic Building at Rutgers Robert Wood Johnson Medical
-  School, 125 Paterson Street, Suite 4100, New Brunswick, NJ 08901
-- Phone (appointments): 732-235-7775
-- Hours: Monday to Friday, 9:00am to 5:00pm
-- Serves patients across Central New Jersey, including New Brunswick, East
-  Brunswick, North Brunswick, Edison, Piscataway, Highland Park, Metuchen,
-  Milltown, Somerset, and Old Bridge, and Middlesex, Somerset, and Mercer
-  counties
-- Most major insurance plans accepted, including Medicare, Medicaid, Aetna,
-  Horizon BCBS, Cigna, and UnitedHealthcare; full list:
-  https://centralnjurogynecology.com/appointments.html
+Index: https://centralnjurogynecology.com/treatments.html
 
 ## Key pages
 
@@ -49,7 +60,15 @@ and revision surgery.
 - Patient reviews (from Google): https://centralnjurogynecology.com/reviews.html
 - All conditions: https://centralnjurogynecology.com/conditions.html
 - All treatments: https://centralnjurogynecology.com/treatments.html
-- Appointments and insurance: https://centralnjurogynecology.com/appointments.html
+- Appointments, insurance, directions, common questions:
+  https://centralnjurogynecology.com/appointments.html
 - Urinary leakage: https://centralnjurogynecology.com/urinary-leakage.html
 - Pelvic organ prolapse: https://centralnjurogynecology.com/pelvic-organ-prolapse.html
 - Overactive bladder: https://centralnjurogynecology.com/overactive-bladder.html
+
+## Structured data
+
+Every page carries schema.org JSON-LD (MedicalClinic, Physician with sameAs
+links, BreadcrumbList; MedicalCondition or MedicalProcedure and FAQPage on
+clinical pages; VideoObject on the About page). Condition and treatment
+pages answer their questions in the page text under question-form headings.

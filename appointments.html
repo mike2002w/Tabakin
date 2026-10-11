@@ -175,9 +175,15 @@
           "givenName": "Alexandra",
           "familyName": "Tabakin",
           "honorificSuffix": "MD",
-          "identifier": {"@type": "PropertyValue", "propertyID": "NPI", "value": "1982132684"},
+          "alternateName": ["Alexandra L. Tabakin, MD", "Alexandra Lauren Tabakin", "Dr. Alexandra Tabakin"],
+          "identifier": [
+            {"@type": "PropertyValue", "propertyID": "NPI", "value": "1982132684"},
+            {"@type": "PropertyValue", "propertyID": "ORCID", "value": "0000-0003-4046-2966"}
+          ],
           "sameAs": [
             "https://www.instagram.com/njurogynecology",
+            "https://orcid.org/0000-0003-4046-2966",
+            "https://www.wikidata.org/wiki/Q92256753",
             "https://rwjms.rutgers.edu/people/alexandra-l-tabakin-md",
             "https://www.rwjbh.org/doctors/alexandra-l-tabakin-md/",
             "https://www.healthgrades.com/physician/dr-alexandra-tabakin-xyn7n92",
@@ -232,6 +238,62 @@
             "addressCountry": "US"
           },
           "telephone": "+17322357775"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I request an appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff, who contact you during business hours, Monday to Friday, 9am to 5pm, to schedule your visit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the office hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Monday to Friday, 9:00am to 5:00pm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the office, and where do I park?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The office is in the Clinical Academic Building at Rutgers Robert Wood Johnson Medical School, 125 Paterson Street, Suite 4100, New Brunswick, NJ 08901, minutes from Route 18 and Exit 9 of the New Jersey Turnpike. Public parking is available near the building; allow a few extra minutes to park."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which insurance plans are accepted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most major plans, including Horizon Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare/Oxford, Medicare and Medicaid; the full list of accepted plans is on this page. Please confirm your specific plan with the office when you schedule."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I bring to my first visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your insurance card and photo ID, a list of your current medications, and any relevant prior records or imaging, if available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to include medical details in the online form?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The form is only used to schedule your visit; you can share medical details with Dr. Tabakin in person."
+          }
         }
       ]
     }
@@ -386,10 +448,19 @@
             </div>
 
             <!-- Insurance Accepted -->
+            <div class="common-q" id="faq">
+                <h2 style="text-align: center; margin-bottom: 18px;">Common Questions</h2>
+                <details><summary>How do I request an appointment?</summary><p>Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff, who contact you during business hours, Monday to Friday, 9am to 5pm, to schedule your visit.</p></details>
+                <details><summary>What are the office hours?</summary><p>Monday to Friday, 9:00am to 5:00pm.</p></details>
+                <details><summary>Where is the office, and where do I park?</summary><p>The office is in the Clinical Academic Building at Rutgers Robert Wood Johnson Medical School, 125 Paterson Street, Suite 4100, New Brunswick, NJ 08901, minutes from Route 18 and Exit 9 of the New Jersey Turnpike. Public parking is available near the building; allow a few extra minutes to park.</p></details>
+                <details><summary>Which insurance plans are accepted?</summary><p>Most major plans, including Horizon Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare/Oxford, Medicare and Medicaid; the full list of accepted plans is on this page. Please confirm your specific plan with the office when you schedule.</p></details>
+                <details><summary>What should I bring to my first visit?</summary><p>Your insurance card and photo ID, a list of your current medications, and any relevant prior records or imaging, if available.</p></details>
+                <details><summary>Do I need to include medical details in the online form?</summary><p>No. The form is only used to schedule your visit; you can share medical details with Dr. Tabakin in person.</p></details>
+            </div>
             <div id="insurance" style="max-width: 900px; margin: 60px auto 40px; padding: 0 20px;">
                 <h2 style="margin-bottom: 12px; text-align: center; color: var(--primary-dark);">Insurance Plans Accepted</h2>
                 <p style="text-align: center; max-width: 640px; margin: 0 auto 32px; color: var(--neutral-medium);">
-                    Central NJ Urogynecology participates with most major insurers in New Jersey. If your plan isn't listed, please call us &mdash; coverage networks change frequently.
+                    Central NJ Urogynecology participates with most major insurers in New Jersey. If your plan isn't listed, please call us; coverage networks change frequently.
                 </p>
                 <ul style="list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px;">
                     <li style="padding: 10px 14px; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 6px; font-size: 15px; color: var(--neutral-dark);">Aetna</li>
@@ -429,6 +500,16 @@
             <!-- Office details -->
             <div class="info-box" style="max-width: 600px; margin: 40px auto; text-align: center;">
                 <h2 style="margin-bottom: 20px;">Contact Us</h2>
+                <table class="facts">
+                    <tr><th>Office</th><td>Clinical Academic Building at Rutgers Robert Wood Johnson Medical School, 125 Paterson Street, Suite 4100, New Brunswick, NJ 08901</td></tr>
+                    <tr><th>Phone</th><td><a href="tel:732-235-7775">732-235-7775</a></td></tr>
+                    <tr><th>Hours</th><td>Monday to Friday, 9:00am to 5:00pm</td></tr>
+                    <tr><th>Parking</th><td>Public parking near the building; allow a few extra minutes</td></tr>
+                    <tr><th>Directions</th><td>Minutes from Route 18 and Exit 9 of the New Jersey Turnpike. <a href="https://www.google.com/maps/dir/?api=1&destination=125+Paterson+Street,+New+Brunswick,+NJ+08901" target="_blank" rel="noopener">Get directions</a></td></tr>
+                    <tr><th>Insurance</th><td>Most major plans, including Horizon BCBS, Aetna, Cigna, UnitedHealthcare/Oxford, Medicare and Medicaid. <a href="#insurance">Full list</a></td></tr>
+                    <tr><th>Bring</th><td>Insurance card, photo ID, a list of current medications, and any prior records or imaging</td></tr>
+                    <tr><th>Request a visit</th><td>Use the form above or call; the office contacts you during business hours</td></tr>
+                </table>
                 <p style="font-size: 20px; margin-bottom: 10px;"><strong>For appointments, call:</strong></p>
                 <p style="font-size: 32px; color: var(--accent-coral); font-weight: 600; margin-bottom: 30px;">
                     <a href="tel:732-235-7775" style="color: var(--accent-coral); text-decoration: none;">732-235-7775</a>
