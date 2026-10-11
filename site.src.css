@@ -556,6 +556,21 @@ nav {
     color: var(--primary-medium);
 }
 
+.research-callout {
+    margin-top: 22px;
+    padding: 18px 22px;
+    background: var(--white);
+    border: 1px solid #E5E7EB;
+    border-left: 4px solid var(--accent-coral);
+    border-radius: 0 10px 10px 0;
+}
+
+.research-callout p {
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 .updated {
     font-size: 13px;
     color: var(--neutral-medium);
