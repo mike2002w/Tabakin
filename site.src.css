@@ -571,6 +571,21 @@ nav {
     line-height: 1.6;
 }
 
+.summary {
+    max-width: 900px;
+    margin: 0 0 30px;
+    padding: 18px 22px;
+    background: #FBF7FD;
+    border-left: 4px solid var(--accent-coral);
+    border-radius: 0 8px 8px 0;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.summary strong {
+    color: var(--primary-dark);
+}
+
 .updated {
     font-size: 13px;
     color: var(--neutral-medium);
