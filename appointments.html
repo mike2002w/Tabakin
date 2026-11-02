@@ -252,7 +252,7 @@
           "name": "How do I request an appointment?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff, who contact you during business hours, Monday to Friday, 9am to 5pm, to schedule your visit."
+            "text": "Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff and is used only to schedule your visit."
           }
         },
         {
@@ -408,7 +408,6 @@
                 <p style="text-align: center; font-size: 15px; color: var(--neutral-medium); line-height: 1.6; max-width: 560px; margin: 0 auto 28px;">
                     Your request goes privately to our office staff and is used only to schedule your visit.
                     There is no need to include medical details here; you can share those with Dr. Tabakin in person.
-                    Our office will contact you during business hours, Monday to Friday, 9am to 5pm.
                 </p>
                 <form onsubmit="handleFormSubmit(event)">
                     <div class="form-row">
@@ -450,7 +449,7 @@
             <!-- Insurance Accepted -->
             <div class="common-q" id="faq">
                 <h2 style="text-align: center; margin-bottom: 18px;">Common Questions</h2>
-                <details><summary>How do I request an appointment?</summary><p>Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff, who contact you during business hours, Monday to Friday, 9am to 5pm, to schedule your visit.</p></details>
+                <details><summary>How do I request an appointment?</summary><p>Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff and is used only to schedule your visit.</p></details>
                 <details><summary>What are the office hours?</summary><p>Monday to Friday, 9:00am to 5:00pm.</p></details>
                 <details><summary>Where is the office, and where do I park?</summary><p>The office is in the Clinical Academic Building at Rutgers Robert Wood Johnson Medical School, 125 Paterson Street, Suite 4100, New Brunswick, NJ 08901, minutes from Route 18 and Exit 9 of the New Jersey Turnpike. Public parking is available near the building; allow a few extra minutes to park.</p></details>
                 <details><summary>Which insurance plans are accepted?</summary><p>Most major plans, including Horizon Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare/Oxford, Medicare and Medicaid; the full list of accepted plans is on this page. Please confirm your specific plan with the office when you schedule.</p></details>
@@ -509,7 +508,7 @@
                     <tr><th>Directions</th><td>Minutes from Route 18 and Exit 9 of the New Jersey Turnpike. <a href="https://www.google.com/maps/dir/?api=1&destination=125+Paterson+Street,+New+Brunswick,+NJ+08901" target="_blank" rel="noopener">Get directions</a></td></tr>
                     <tr><th>Insurance</th><td>Most major plans, including Horizon BCBS, Aetna, Cigna, UnitedHealthcare/Oxford, Medicare and Medicaid. <a href="#insurance">Full list</a></td></tr>
                     <tr><th>Bring</th><td>Insurance card, photo ID, a list of current medications, and any prior records or imaging</td></tr>
-                    <tr><th>Request a visit</th><td>Use the form above or call; the office contacts you during business hours</td></tr>
+                    <tr><th>Request a visit</th><td>Use the form above or call 732-235-7775</td></tr>
                 </table>
                 <p style="font-size: 20px; margin-bottom: 10px;"><strong>For appointments, call:</strong></p>
                 <p style="font-size: 32px; color: var(--accent-coral); font-weight: 600; margin-bottom: 30px;">
@@ -717,7 +716,7 @@
                         'event_label': 'Appointment Request Form'
                     });
                 }
-                showStatus(true, 'Your request has been sent. Our office will contact you during business hours, Monday to Friday, 9am to 5pm. If you have not heard from us within 2 business days, please call <a href="tel:732-235-7775" style="color:#1B5E20; font-weight:600;">732-235-7775</a>.');
+                showStatus(true, 'Your request has been sent. If you do not hear from the office within 2 business days, please call 732-235-7775.');
                 form.reset();
             })
             .catch(() => {

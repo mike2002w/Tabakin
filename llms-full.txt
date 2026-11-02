@@ -1,6 +1,6 @@
 # Central NJ Urogynecology: full site text for AI assistants
 
-Dr. Alexandra Tabakin, MD, urologist and fellowship-trained urogynecologist, Rutgers Robert Wood Johnson Medical School, New Brunswick, NJ. Phone 732-235-7775. Generated from the live pages on 2026-10-11; the pages themselves are canonical.
+Dr. Alexandra Tabakin, MD, urologist and fellowship-trained urogynecologist, Rutgers Robert Wood Johnson Medical School, New Brunswick, NJ. Phone 732-235-7775. Generated from the live pages on 2026-11-01; the pages themselves are canonical.
 
 
 ---
@@ -519,7 +519,7 @@ URL: https://centralnjurogynecology.com/faq.html
 ## Appointments, insurance and visiting the office
 
 ### How do I request an appointment?
-Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff, who contact you during business hours, Monday to Friday, 9am to 5pm, to schedule your visit.
+Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff and is used only to schedule your visit.
 
 ### What are the office hours?
 Monday to Friday, 9:00am to 5:00pm.
@@ -1001,7 +1001,7 @@ URL: https://centralnjurogynecology.com/pelvic-organ-prolapse.html
 
  Evaluation and treatment for bladder, uterine and vaginal prolapse with Dr. Tabakin in New Brunswick, NJ.
 
- In short: Pelvic organ prolapse is the bladder, uterus, vagina or rectum dropping from its normal position, felt as a vaginal bulge or pelvic pressure. Dr. Alexandra Tabakin, a urologist and fellowship-trained urogynecologist in New Brunswick, NJ, diagnoses prolapse with a history and pelvic exam and offers pelvic floor therapy and pessaries as well as vaginal and robotic surgery.
+ In short: Pelvic organ prolapse is the bladder, uterus, vagina or rectum dropping from its normal position, felt as a vaginal bulge or pelvic pressure. Dr. Alexandra Tabakin, a fellowship-trained urogynecologist and urologist with RWJBarnabas Health Medical Group, treats prolapse in central New Jersey at 125 Paterson Street, New Brunswick, with options from pelvic floor therapy and pessaries to vaginal and robotic surgery.
 
  Pelvic organ prolapse: introduction
 
@@ -1013,6 +1013,8 @@ URL: https://centralnjurogynecology.com/pelvic-organ-prolapse.html
 
  Request an Appointment
  Call 732-235-7775
+
+ Dr. Tabakin sees patients with prolapse from New Brunswick, East Brunswick, North Brunswick, Edison, Piscataway, Highland Park, Metuchen, Milltown, Somerset, Old Bridge, and Monroe.
 
 ### What are symptoms of pelvic organ prolapse?
 
@@ -1089,6 +1091,20 @@ URL: https://centralnjurogynecology.com/pelvic-organ-prolapse.html
  Related pages: Prolapse Surgery · Robotic Surgery · Vaginal Surgery
 
  Schedule a Consultation
+
+## Common questions about prolapse care
+
+### Where can I get pelvic organ prolapse treatment in central New Jersey?
+
+ Dr. Alexandra Tabakin treats pelvic organ prolapse at Central NJ Urogynecology, part of RWJBarnabas Health Medical Group, at 125 Paterson Street, Suite 4100, New Brunswick, NJ 08901. Call 732-235-7775 to schedule a visit.
+
+### Do I need surgery for prolapse?
+
+ Not always. Many women do well with a pessary, a removable support device fitted in the office, or with pelvic floor physical therapy. Surgery, done vaginally or with a robotic approach, is for symptoms that bother you.
+
+### How do I make an appointment?
+
+ Call 732-235-7775, Monday to Friday, 9am to 5pm, or use the Request an Appointment link to send a request online. There is no need to include medical details in the online form.
 
 ---
 
@@ -2135,7 +2151,6 @@ URL: https://centralnjurogynecology.com/appointments.html
 
  Your request goes privately to our office staff and is used only to schedule your visit.
  There is no need to include medical details here; you can share those with Dr. Tabakin in person.
- Our office will contact you during business hours, Monday to Friday, 9am to 5pm.
 
  First Name *
 
@@ -2154,7 +2169,7 @@ URL: https://centralnjurogynecology.com/appointments.html
 ## Common Questions
 
 ### How do I request an appointment?
-Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff, who contact you during business hours, Monday to Friday, 9am to 5pm, to schedule your visit.
+Use the request form on this page or call 732-235-7775. Your request goes privately to the office staff and is used only to schedule your visit.
 
 ### What are the office hours?
 Monday to Friday, 9:00am to 5:00pm.
@@ -2251,7 +2266,7 @@ Insurance Most major plans, including Horizon BCBS, Aetna, Cigna, UnitedHealthca
 
 Bring Insurance card, photo ID, a list of current medications, and any prior records or imaging
 
-Request a visit Use the form above or call; the office contacts you during business hours
+Request a visit Use the form above or call 732-235-7775
 
  For appointments, call:
 
