@@ -1,6 +1,6 @@
 # Central NJ Urogynecology: full site text for AI assistants
 
-Dr. Alexandra Tabakin, MD, urologist and fellowship-trained urogynecologist, Rutgers Robert Wood Johnson Medical School, New Brunswick, NJ. Phone 732-235-7775. Generated from the live pages on 2026-11-01; the pages themselves are canonical.
+Dr. Alexandra Tabakin, MD, urologist and fellowship-trained urogynecologist, Rutgers Robert Wood Johnson Medical School, New Brunswick, NJ. Phone 732-235-7775. Generated from the live pages on 2026-11-02; the pages themselves are canonical.
 
 
 ---
@@ -32,9 +32,7 @@ URL: https://centralnjurogynecology.com/
 
 ## Meet Dr. Tabakin
 
- Dr. Alexandra Tabakin combines advanced fellowship training and experience with a compassionate, 
- evidence-based approach to help women improve their pelvic health and quality of life with a focus 
- on real, professional care tailored to your unique needs.
+ Dr. Alexandra Tabakin, MD, is a urologist and fellowship-trained urogynecologist. She earned her medical degree and completed her urology residency at Rutgers Robert Wood Johnson Medical School, then completed a fellowship in urogynecology and reconstructive pelvic surgery at Northwell Health. She is an Assistant Professor of Surgery in the Division of Urology at Rutgers Robert Wood Johnson Medical School and sees patients with RWJBarnabas Health Medical Group in the Clinical Academic Building, 125 Paterson Street, Suite 4100, New Brunswick, NJ. She has authored 57 PubMed-indexed articles, reviews and editorials in urology and urogynecology.
 
  By providing cutting-edge and research-driven treatments, Dr. Tabakin offers comprehensive care for 
  pelvic floor disorders including pelvic organ prolapse, urinary incontinence, genitourinary fistulae, 
@@ -303,6 +301,10 @@ URL: https://centralnjurogynecology.com/conditions.html
 
  Dr. Tabakin diagnoses and treats the full range of pelvic floor disorders. Choose a condition to read about symptoms, causes, and treatment options.
 
+ In short: Dr. Alexandra Tabakin, a urologist and fellowship-trained urogynecologist at Rutgers Robert Wood Johnson Medical School, treats pelvic floor and bladder conditions in women at 125 Paterson Street in New Brunswick, NJ: pelvic organ prolapse, urinary leakage with activity or with urgency, overactive bladder, recurrent urinary tract infections, urinary retention, vaginal fistula, urethral diverticulum, pelvic floor injury after childbirth, genitourinary syndrome of menopause, and complications from prior mesh surgery. She also treats men with an enlarged prostate (BPH). Most of these conditions have both non-surgical and surgical options.
+
+ Not sure which page fits your symptoms? Leakage with coughing, sneezing or exercise usually points to stress urinary incontinence; sudden urges and frequent trips to the bathroom to overactive bladder; a vaginal bulge or pelvic pressure to pelvic organ prolapse. If you are unsure, request an appointment and describe what you notice; the first visit is an evaluation.
+
  Pelvic Organ ProlapseComprehensive surgical and non-surgical treatmentsLearn more →
  Urinary LeakagePersonalized treatment for involuntary urine lossLearn more →
  Stress Urinary IncontinenceAdvanced solutions for bladder leakage during physical activityLearn more →
@@ -330,6 +332,10 @@ URL: https://centralnjurogynecology.com/treatments.html
 # Treatments We Offer
 
  From office-based therapies to robotic and vaginal reconstructive surgery, Dr. Tabakin matches treatment to your symptoms and goals. Choose a treatment to learn how it works and what to expect.
+
+ In short: Dr. Alexandra Tabakin, a urologist and fellowship-trained urogynecologist, offers office-based and surgical treatments for pelvic floor and bladder conditions at 125 Paterson Street in New Brunswick, NJ. Office treatments include bladder Botox, urethral bulking, posterior tibial nerve stimulation and pessary fitting. Surgical treatments include the midurethral sling, sacral neuromodulation, and vaginal and robotic surgery for prolapse and other pelvic floor repairs. Where you start depends on your symptoms, your goals and what you have already tried; the first visit does not commit you to a procedure.
+
+ Which treatment goes with which problem? Leakage with coughing or exercise: pelvic floor therapy, urethral bulking or a midurethral sling. Urgency and overactive bladder: medication, posterior tibial nerve stimulation, bladder Botox or sacral neuromodulation. A vaginal bulge from prolapse: a pessary, pelvic floor therapy, or vaginal or robotic surgery. Start with the conditions pages if you are not sure what you have.
 
  Robotic SurgeryMinimally invasive precision proceduresLearn more →
  Vaginal SurgeryNo external incisions, faster recoveryLearn more →
@@ -584,6 +590,25 @@ Stress urinary incontinence means leakage of urine with activities like coughing
 ### How is stress urinary incontinence treated?
 The treatment for stress urinary incontinence depends on the severity of your symptoms, your lifestyle, and your treatment goals. There are non-surgical and surgical options. Your doctor will help you select the best option for you. Non-surgical options include: Observation, Lifestyle modifications (weight loss, anti-cough medications, etc.), Pelvic floor physical therapy, Pessary, Intra-vaginal inserts. Surgical options include: Urethral Bulking Agent, Mid-urethral Sling.
 
+### Stress incontinence treatment options, one by one
+#### Pelvic floor physical therapy
+A pelvic floor physical therapist teaches you to find, strengthen and time the muscles that support the urethra, so they tighten at the moment you cough, sneeze, laugh or lift. There is no downtime, it pairs with any other option, and it is often the first step. Ask Dr. Tabakin for a referral if you would like to start there.
+
+#### Pessary or vaginal insert
+A pessary is a small, removable silicone device fitted in the office that supports the urethra from inside the vagina. Some women wear one only for exercise or long days; others wear one daily. Disposable over-the-counter inserts work the same way. Neither changes your anatomy, so they suit women who want to avoid a procedure or who may become pregnant in the future.
+
+#### Urethral bulking
+Urethral bulking is an in-office injection of a soft gel into the wall of the urethra so that it closes more completely. It is done under local anesthesia and you go home the same day. It suits milder leakage and women who prefer to avoid an operation under general anesthesia. The effect can wear off over time, and the injection can be repeated.
+
+#### Midurethral sling
+A midurethral sling is a narrow strip of synthetic mesh placed under the urethra through a small vaginal incision, where it supports the urethra like a hammock when you cough or exercise. It is the most common surgical treatment for stress incontinence in women. Most patients go home the same day and return to work and normal activities within two to three weeks.
+
+### How is stress incontinence evaluated?
+Evaluation usually starts with a conversation about when you leak, how much, and what makes it worse, followed by a pelvic exam that includes a cough test and a urine test to rule out infection. Dr. Tabakin may ask you to keep a bladder diary for a few days. Bladder function testing (urodynamics) is sometimes done before surgery, especially if you also have urgency or have had pelvic surgery before.
+
+### Which option is right for me?
+It depends on how much the leakage limits you, how severe it is on examination, whether you also have urgency or prolapse, your plans for pregnancy, and how you feel about a procedure. Many women start with physical therapy or a pessary and move to bulking or a sling only if leakage still bothers them. The first visit is an evaluation and a conversation, not a commitment to surgery.
+
  Read the full Stress Urinary Incontinence page →
 
 ## Overactive Bladder
@@ -737,6 +762,8 @@ The da Vinci's vision capabilities give your surgeon a highly magnified, crystal
 
 ### What are the benefits of robotic surgery to patients?
 Robotic surgery has been associated with shorter length of hospital stay, fewer complications, and lower blood loss.
+
+Dr. Tabakin's robotic surgery patients come from East Brunswick, North Brunswick, Edison, Piscataway, Highland Park, Metuchen, Milltown, Somerset, Old Bridge and Monroe, as well as New Brunswick itself. Her office is in the Clinical Academic Building at 125 Paterson Street, Suite 4100, minutes from Route 18.
 
  Read the full Robotic Surgery page →
 
@@ -940,7 +967,7 @@ URL: https://centralnjurogynecology.com/reviews.html
 
  5.0
 
- Based on patient reviews on Google
+ 5.0 out of 5 from 9 patient reviews on Google, as of November 2026
 
  “I had a wonderful experience with Dr. Alexandra Tabakin. Visiting a urologist can often feel daunting, but Dr. Tabakin immediately put me at ease. She was exceptionally pleasant, warm, and attentive. She truly took the time to listen to all of my concerns, explained everything clearly, and answered each of my questions without rushing. I left my appointment feeling completely reassured and far more comfortable. I highly recommend Dr. Tabakin to anyone seeking a skilled, compassionate doctor.”
 
